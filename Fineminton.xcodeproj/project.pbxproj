@@ -1,0 +1,693 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B63FA2028B3D09F008E9BAB /* FinemintonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63FA1F28B3D09F008E9BAB /* FinemintonApp.swift */; };
+		2B63FA2228B3D09F008E9BAB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63FA2128B3D09F008E9BAB /* ContentView.swift */; };
+		2B63FA2428B3D0A0008E9BAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B63FA2328B3D0A0008E9BAB /* Assets.xcassets */; };
+		2B63FA2728B3D0A0008E9BAB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B63FA2628B3D0A0008E9BAB /* Preview Assets.xcassets */; };
+		2B63FA3528B3D13E008E9BAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B63FA3428B3D13E008E9BAB /* Assets.xcassets */; };
+		2B63FA3B28B3D13F008E9BAB /* FinemintonWatchApp WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2B63FA3A28B3D13F008E9BAB /* FinemintonWatchApp WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2B63FA4028B3D13F008E9BAB /* FinemintonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63FA3F28B3D13F008E9BAB /* FinemintonApp.swift */; };
+		2B63FA4228B3D13F008E9BAB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63FA4128B3D13F008E9BAB /* ContentView.swift */; };
+		2B63FA4428B3D13F008E9BAB /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63FA4328B3D13F008E9BAB /* NotificationController.swift */; };
+		2B63FA4628B3D13F008E9BAB /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63FA4528B3D13F008E9BAB /* NotificationView.swift */; };
+		2B63FA4828B3D13F008E9BAB /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63FA4728B3D13F008E9BAB /* ComplicationController.swift */; };
+		2B63FA4A28B3D13F008E9BAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B63FA4928B3D13F008E9BAB /* Assets.xcassets */; };
+		2B63FA4D28B3D13F008E9BAB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B63FA4C28B3D13F008E9BAB /* Preview Assets.xcassets */; };
+		2B63FA5228B3D13F008E9BAB /* FinemintonWatchApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2B63FA3228B3D13E008E9BAB /* FinemintonWatchApp.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2B63FA3C28B3D13F008E9BAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B63FA1428B3D09F008E9BAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B63FA3928B3D13F008E9BAB;
+			remoteInfo = "FinemintonWatchApp WatchKit Extension";
+		};
+		2B63FA5028B3D13F008E9BAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B63FA1428B3D09F008E9BAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B63FA3128B3D13E008E9BAB;
+			remoteInfo = FinemintonWatchApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2B63FA5628B3D13F008E9BAB /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				2B63FA3B28B3D13F008E9BAB /* FinemintonWatchApp WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B63FA5A28B3D13F008E9BAB /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				2B63FA5228B3D13F008E9BAB /* FinemintonWatchApp.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2B63FA1C28B3D09F008E9BAB /* Fineminton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fineminton.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B63FA1F28B3D09F008E9BAB /* FinemintonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinemintonApp.swift; sourceTree = "<group>"; };
+		2B63FA2128B3D09F008E9BAB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2B63FA2328B3D0A0008E9BAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B63FA2628B3D0A0008E9BAB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2B63FA3228B3D13E008E9BAB /* FinemintonWatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinemintonWatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B63FA3428B3D13E008E9BAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B63FA3A28B3D13F008E9BAB /* FinemintonWatchApp WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "FinemintonWatchApp WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B63FA3F28B3D13F008E9BAB /* FinemintonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinemintonApp.swift; sourceTree = "<group>"; };
+		2B63FA4128B3D13F008E9BAB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2B63FA4328B3D13F008E9BAB /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		2B63FA4528B3D13F008E9BAB /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		2B63FA4728B3D13F008E9BAB /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		2B63FA4928B3D13F008E9BAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B63FA4C28B3D13F008E9BAB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2B63FA4E28B3D13F008E9BAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B63FA4F28B3D13F008E9BAB /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2B63FA1928B3D09F008E9BAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B63FA3728B3D13F008E9BAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B63FA1328B3D09F008E9BAB = {
+			isa = PBXGroup;
+			children = (
+				2B63FA1E28B3D09F008E9BAB /* Fineminton */,
+				2B63FA3328B3D13E008E9BAB /* FinemintonWatchApp */,
+				2B63FA3E28B3D13F008E9BAB /* FinemintonWatchApp WatchKit Extension */,
+				2B63FA1D28B3D09F008E9BAB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2B63FA1D28B3D09F008E9BAB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B63FA1C28B3D09F008E9BAB /* Fineminton.app */,
+				2B63FA3228B3D13E008E9BAB /* FinemintonWatchApp.app */,
+				2B63FA3A28B3D13F008E9BAB /* FinemintonWatchApp WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2B63FA1E28B3D09F008E9BAB /* Fineminton */ = {
+			isa = PBXGroup;
+			children = (
+				2B63FA2F28B3D0D1008E9BAB /* Model */,
+				2B63FA2E28B3D0D1008E9BAB /* View */,
+				2B63FA2D28B3D0D1008E9BAB /* ViewModel */,
+				2B63FA1F28B3D09F008E9BAB /* FinemintonApp.swift */,
+				2B63FA2128B3D09F008E9BAB /* ContentView.swift */,
+				2B63FA2328B3D0A0008E9BAB /* Assets.xcassets */,
+				2B63FA2528B3D0A0008E9BAB /* Preview Content */,
+			);
+			path = Fineminton;
+			sourceTree = "<group>";
+		};
+		2B63FA2528B3D0A0008E9BAB /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2B63FA2628B3D0A0008E9BAB /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2B63FA2D28B3D0D1008E9BAB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2B63FA2E28B3D0D1008E9BAB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B63FA2F28B3D0D1008E9BAB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2B63FA3328B3D13E008E9BAB /* FinemintonWatchApp */ = {
+			isa = PBXGroup;
+			children = (
+				2B63FA3428B3D13E008E9BAB /* Assets.xcassets */,
+			);
+			path = FinemintonWatchApp;
+			sourceTree = "<group>";
+		};
+		2B63FA3E28B3D13F008E9BAB /* FinemintonWatchApp WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2B63FA3F28B3D13F008E9BAB /* FinemintonApp.swift */,
+				2B63FA4128B3D13F008E9BAB /* ContentView.swift */,
+				2B63FA4328B3D13F008E9BAB /* NotificationController.swift */,
+				2B63FA4528B3D13F008E9BAB /* NotificationView.swift */,
+				2B63FA4728B3D13F008E9BAB /* ComplicationController.swift */,
+				2B63FA4928B3D13F008E9BAB /* Assets.xcassets */,
+				2B63FA4E28B3D13F008E9BAB /* Info.plist */,
+				2B63FA4F28B3D13F008E9BAB /* PushNotificationPayload.apns */,
+				2B63FA4B28B3D13F008E9BAB /* Preview Content */,
+			);
+			path = "FinemintonWatchApp WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		2B63FA4B28B3D13F008E9BAB /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2B63FA4C28B3D13F008E9BAB /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2B63FA1B28B3D09F008E9BAB /* Fineminton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B63FA2A28B3D0A0008E9BAB /* Build configuration list for PBXNativeTarget "Fineminton" */;
+			buildPhases = (
+				2B63FA1828B3D09F008E9BAB /* Sources */,
+				2B63FA1928B3D09F008E9BAB /* Frameworks */,
+				2B63FA1A28B3D09F008E9BAB /* Resources */,
+				2B63FA5A28B3D13F008E9BAB /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B63FA5128B3D13F008E9BAB /* PBXTargetDependency */,
+			);
+			name = Fineminton;
+			productName = Fineminton;
+			productReference = 2B63FA1C28B3D09F008E9BAB /* Fineminton.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2B63FA3128B3D13E008E9BAB /* FinemintonWatchApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B63FA5728B3D13F008E9BAB /* Build configuration list for PBXNativeTarget "FinemintonWatchApp" */;
+			buildPhases = (
+				2B63FA3028B3D13E008E9BAB /* Resources */,
+				2B63FA5628B3D13F008E9BAB /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B63FA3D28B3D13F008E9BAB /* PBXTargetDependency */,
+			);
+			name = FinemintonWatchApp;
+			productName = FinemintonWatchApp;
+			productReference = 2B63FA3228B3D13E008E9BAB /* FinemintonWatchApp.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		2B63FA3928B3D13F008E9BAB /* FinemintonWatchApp WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B63FA5328B3D13F008E9BAB /* Build configuration list for PBXNativeTarget "FinemintonWatchApp WatchKit Extension" */;
+			buildPhases = (
+				2B63FA3628B3D13F008E9BAB /* Sources */,
+				2B63FA3728B3D13F008E9BAB /* Frameworks */,
+				2B63FA3828B3D13F008E9BAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FinemintonWatchApp WatchKit Extension";
+			productName = "FinemintonWatchApp WatchKit Extension";
+			productReference = 2B63FA3A28B3D13F008E9BAB /* FinemintonWatchApp WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2B63FA1428B3D09F008E9BAB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					2B63FA1B28B3D09F008E9BAB = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					2B63FA3128B3D13E008E9BAB = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					2B63FA3928B3D13F008E9BAB = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 2B63FA1728B3D09F008E9BAB /* Build configuration list for PBXProject "Fineminton" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2B63FA1328B3D09F008E9BAB;
+			productRefGroup = 2B63FA1D28B3D09F008E9BAB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2B63FA1B28B3D09F008E9BAB /* Fineminton */,
+				2B63FA3128B3D13E008E9BAB /* FinemintonWatchApp */,
+				2B63FA3928B3D13F008E9BAB /* FinemintonWatchApp WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2B63FA1A28B3D09F008E9BAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B63FA2728B3D0A0008E9BAB /* Preview Assets.xcassets in Resources */,
+				2B63FA2428B3D0A0008E9BAB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B63FA3028B3D13E008E9BAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B63FA3528B3D13E008E9BAB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B63FA3828B3D13F008E9BAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B63FA4D28B3D13F008E9BAB /* Preview Assets.xcassets in Resources */,
+				2B63FA4A28B3D13F008E9BAB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B63FA1828B3D09F008E9BAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B63FA2228B3D09F008E9BAB /* ContentView.swift in Sources */,
+				2B63FA2028B3D09F008E9BAB /* FinemintonApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B63FA3628B3D13F008E9BAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B63FA4428B3D13F008E9BAB /* NotificationController.swift in Sources */,
+				2B63FA4228B3D13F008E9BAB /* ContentView.swift in Sources */,
+				2B63FA4828B3D13F008E9BAB /* ComplicationController.swift in Sources */,
+				2B63FA4028B3D13F008E9BAB /* FinemintonApp.swift in Sources */,
+				2B63FA4628B3D13F008E9BAB /* NotificationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2B63FA3D28B3D13F008E9BAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B63FA3928B3D13F008E9BAB /* FinemintonWatchApp WatchKit Extension */;
+			targetProxy = 2B63FA3C28B3D13F008E9BAB /* PBXContainerItemProxy */;
+		};
+		2B63FA5128B3D13F008E9BAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B63FA3128B3D13E008E9BAB /* FinemintonWatchApp */;
+			targetProxy = 2B63FA5028B3D13F008E9BAB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2B63FA2828B3D0A0008E9BAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2B63FA2928B3D0A0008E9BAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2B63FA2B28B3D0A0008E9BAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Fineminton/Preview Content\"";
+				DEVELOPMENT_TEAM = NKVX3X5685;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.candra.Fineminton;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2B63FA2C28B3D0A0008E9BAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Fineminton/Preview Content\"";
+				DEVELOPMENT_TEAM = NKVX3X5685;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.candra.Fineminton;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2B63FA5428B3D13F008E9BAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FinemintonWatchApp WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = NKVX3X5685;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "FinemintonWatchApp WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "FinemintonWatchApp WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.candra.Fineminton.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Debug;
+		};
+		2B63FA5528B3D13F008E9BAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FinemintonWatchApp WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = NKVX3X5685;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "FinemintonWatchApp WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "FinemintonWatchApp WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.candra.Fineminton.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Release;
+		};
+		2B63FA5828B3D13F008E9BAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NKVX3X5685;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = FinemintonWatchApp_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = FinemintonWatchApp;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.candra.Fineminton;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.candra.Fineminton.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Debug;
+		};
+		2B63FA5928B3D13F008E9BAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NKVX3X5685;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = FinemintonWatchApp_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = FinemintonWatchApp;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.candra.Fineminton;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.candra.Fineminton.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B63FA1728B3D09F008E9BAB /* Build configuration list for PBXProject "Fineminton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B63FA2828B3D0A0008E9BAB /* Debug */,
+				2B63FA2928B3D0A0008E9BAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B63FA2A28B3D0A0008E9BAB /* Build configuration list for PBXNativeTarget "Fineminton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B63FA2B28B3D0A0008E9BAB /* Debug */,
+				2B63FA2C28B3D0A0008E9BAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B63FA5328B3D13F008E9BAB /* Build configuration list for PBXNativeTarget "FinemintonWatchApp WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B63FA5428B3D13F008E9BAB /* Debug */,
+				2B63FA5528B3D13F008E9BAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B63FA5728B3D13F008E9BAB /* Build configuration list for PBXNativeTarget "FinemintonWatchApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B63FA5828B3D13F008E9BAB /* Debug */,
+				2B63FA5928B3D13F008E9BAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2B63FA1428B3D09F008E9BAB /* Project object */;
+}
