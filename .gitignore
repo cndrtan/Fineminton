@@ -85,5 +85,6 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
-Fergie.xcodeproj/xcuserdata/shrall.xcuserdatad/xcschemes/xcschememanagement.plist
-.DS_Store
+Fineminton.xcodeproj/project.xcworkspace/xcuserdata/candrawinardi.xcuserdatad/UserInterfaceState.xcuserstate
+Fineminton/.DS_Store
+Fineminton.xcodeproj/xcuserdata/candrawinardi.xcuserdatad/xcschemes/xcschememanagement.plist
