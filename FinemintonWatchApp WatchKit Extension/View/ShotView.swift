@@ -13,33 +13,25 @@ struct ShotView: View {
             Button {
                 
             } label: {
-                HStack{
-                    Text("Clear/Lob").padding(.top, 50).padding(.bottom, 10)
-                }
+                Text("Clear/Lob").padding(.top, 50).padding(.bottom, 10)
             }
 
             Button {
                 
             } label: {
-                HStack{
-                    Text("Smash").padding(.top, 50).padding(.bottom, 10)
-                }
+                Text("Smash").padding(.top, 50).padding(.bottom, 10)
             }
             
             Button {
                 
             } label: {
-                HStack{
-                    Text("Drop Shot").padding(.top, 50).padding(.bottom, 10)
-                }
+                Text("Drop Shot").padding(.top, 50).padding(.bottom, 10)
             }
             
             Button {
                 
             } label: {
-                HStack{
-                    Text("Serve").padding(.top, 50).padding(.bottom, 10)
-                }
+                Text("Serve").padding(.top, 50).padding(.bottom, 10)
             }
         }.navigationBarTitleDisplayMode(.inline)
         .navigationTitle(Text("Choose Shot"))
