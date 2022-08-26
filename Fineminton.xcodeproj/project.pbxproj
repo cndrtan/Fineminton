@@ -21,6 +21,10 @@
 		2B63FA4A28B3D13F008E9BAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B63FA4928B3D13F008E9BAB /* Assets.xcassets */; };
 		2B63FA4D28B3D13F008E9BAB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B63FA4C28B3D13F008E9BAB /* Preview Assets.xcassets */; };
 		2B63FA5228B3D13F008E9BAB /* FinemintonWatchApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2B63FA3228B3D13E008E9BAB /* FinemintonWatchApp.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		38C341AC28B8BE7C0006F78E /* Shot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C341AB28B8BE7C0006F78E /* Shot.swift */; };
+		38C341AE28B8BEEE0006F78E /* ShotData.json in Resources */ = {isa = PBXBuildFile; fileRef = 38C341AD28B8BEEE0006F78E /* ShotData.json */; };
+		38C341B028B8BF3D0006F78E /* ShotViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C341AF28B8BF3D0006F78E /* ShotViewModel.swift */; };
+		38C341B228B8BF990006F78E /* ShotInstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C341B128B8BF990006F78E /* ShotInstructionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +87,10 @@
 		2B63FA4C28B3D13F008E9BAB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2B63FA4E28B3D13F008E9BAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B63FA4F28B3D13F008E9BAB /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		38C341AB28B8BE7C0006F78E /* Shot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shot.swift; sourceTree = "<group>"; };
+		38C341AD28B8BEEE0006F78E /* ShotData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ShotData.json; sourceTree = "<group>"; };
+		38C341AF28B8BF3D0006F78E /* ShotViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotViewModel.swift; sourceTree = "<group>"; };
+		38C341B128B8BF990006F78E /* ShotInstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotInstructionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +156,7 @@
 		2B63FA2D28B3D0D1008E9BAB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				38C341AF28B8BF3D0006F78E /* ShotViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -155,6 +164,7 @@
 		2B63FA2E28B3D0D1008E9BAB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				38C341B128B8BF990006F78E /* ShotInstructionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -162,6 +172,8 @@
 		2B63FA2F28B3D0D1008E9BAB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				38C341AB28B8BE7C0006F78E /* Shot.swift */,
+				38C341AD28B8BEEE0006F78E /* ShotData.json */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -300,6 +312,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38C341AE28B8BEEE0006F78E /* ShotData.json in Resources */,
 				2B63FA2728B3D0A0008E9BAB /* Preview Assets.xcassets in Resources */,
 				2B63FA2428B3D0A0008E9BAB /* Assets.xcassets in Resources */,
 			);
@@ -329,6 +342,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38C341B028B8BF3D0006F78E /* ShotViewModel.swift in Sources */,
+				38C341AC28B8BE7C0006F78E /* Shot.swift in Sources */,
+				38C341B228B8BF990006F78E /* ShotInstructionView.swift in Sources */,
 				2B63FA2228B3D09F008E9BAB /* ContentView.swift in Sources */,
 				2B63FA2028B3D09F008E9BAB /* FinemintonApp.swift in Sources */,
 			);
