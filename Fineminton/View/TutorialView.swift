@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct TutorialView: View {
+    @StateObject private var viewModel: TutorialViewModel = TutorialViewModel()
     var body: some View {
         NavigationView {
             TabView {
-                VideoPlayerView().padding(.leading).padding(.trailing)
-                VideoPlayerView().padding(.leading).padding(.trailing)
-                VideoPlayerView().padding(.leading).padding(.trailing)
-                VideoPlayerView().padding(.leading).padding(.trailing)
+                VideoPlayerView(data: self.viewModel.tutorialSteps[0]).padding(.horizontal)
+                VideoPlayerView(data: self.viewModel.tutorialSteps[1]).padding(.horizontal)
+                VideoPlayerView(data: self.viewModel.tutorialSteps[2]).padding(.horizontal)
+                VideoPlayerView(data: self.viewModel.tutorialSteps[3]).padding(.horizontal)
             }
             .tabViewStyle(.page)
             .indexViewStyle(.page(backgroundDisplayMode: .always))

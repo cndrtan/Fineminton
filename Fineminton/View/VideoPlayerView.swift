@@ -9,15 +9,20 @@ import SwiftUI
 import AVKit
 
 struct VideoPlayerView: View {
+    
+    @State public var data: TutorialStep = TutorialStep()
+    
     var body: some View {
         GeometryReader { geometry in
             VStack {
                 HStack() {
-                    Text("Pergerakan Pukulan Lob/Clear")
+                    Text(self.data.title)
                     Spacer()
-                }
-                VideoPlayer(player: AVPlayer(url:  URL(string: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4")!))
-                    .frame(height: (geometry.size.height * 0.78)).cornerRadius(10)
+                }//.padding(.bottom)
+                VideoPlayer(player: AVPlayer(url:  URL(string: self.data.videoURL)!))
+                    .frame(height: (geometry.size.height * 0.65)).cornerRadius(10)
+                Text(self.data.description)
+                    .multilineTextAlignment(.leading)//.padding(.vertical)
                 Button(action: {
                     print("sign up bin tapped")
                 }) {
@@ -33,7 +38,7 @@ struct VideoPlayerView: View {
                 }
                 .background(Color.blue)
                 .cornerRadius(10)
-            }.padding(.bottom)
+            }
         }
     }
 }
