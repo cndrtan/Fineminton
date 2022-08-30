@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct VideoTutorialView: View {
+struct TutorialView: View {
     var body: some View {
         NavigationView {
             TabView {
-                VideoPlayerView().padding()
-                VideoPlayerView().padding()
-                VideoPlayerView().padding()
-                VideoPlayerView().padding()
+                VideoPlayerView().padding(.leading).padding(.trailing)
+                VideoPlayerView().padding(.leading).padding(.trailing)
+                VideoPlayerView().padding(.leading).padding(.trailing)
+                VideoPlayerView().padding(.leading).padding(.trailing)
             }
             .tabViewStyle(.page)
             .indexViewStyle(.page(backgroundDisplayMode: .always))
@@ -25,7 +25,7 @@ struct VideoTutorialView: View {
 
 struct TutorialView_Previews: PreviewProvider {
     static var previews: some View {
-        VideoTutorialView()
+        TutorialView()
             .previewInterfaceOrientation(.portrait)
     }
 }

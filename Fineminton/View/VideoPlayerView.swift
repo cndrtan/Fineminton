@@ -17,7 +17,7 @@ struct VideoPlayerView: View {
                     Spacer()
                 }
                 VideoPlayer(player: AVPlayer(url:  URL(string: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4")!))
-                    .frame(height: (geometry.size.height * 0.80)).cornerRadius(10)
+                    .frame(height: (geometry.size.height * 0.78)).cornerRadius(10)
                 Button(action: {
                     print("sign up bin tapped")
                 }) {
@@ -33,7 +33,7 @@ struct VideoPlayerView: View {
                 }
                 .background(Color.blue)
                 .cornerRadius(10)
-            }
+            }.padding(.bottom)
         }
     }
 }

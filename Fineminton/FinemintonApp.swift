@@ -12,7 +12,7 @@ struct FinemintonApp: App {
     var body: some Scene {
         WindowGroup {
             //ContentView()
-            VideoTutorialView()
+            TutorialView()
         }
     }
 }
