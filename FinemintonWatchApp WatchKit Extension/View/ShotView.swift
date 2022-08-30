@@ -12,20 +12,36 @@ struct ShotView: View {
     
     var body: some View {
         List{
-            NavigationLink(destination: TimerView()) {
+            Button {
+                isShowTimerView.toggle()
+            } label: {
                 Text("Clear/Lob").padding(.top, 50).padding(.bottom, 10)
+            }.fullScreenCover(isPresented: $isShowTimerView) {
+                TimerView()
             }
 
-            NavigationLink(destination: TimerView()) {
+            Button {
+                isShowTimerView.toggle()
+            } label: {
                 Text("Smash").padding(.top, 50).padding(.bottom, 10)
+            }.fullScreenCover(isPresented: $isShowTimerView) {
+                TimerView()
             }
-            
-            NavigationLink(destination: TimerView()) {
+
+            Button {
+                isShowTimerView.toggle()
+            } label: {
                 Text("Drop Shot").padding(.top, 50).padding(.bottom, 10)
+            }.fullScreenCover(isPresented: $isShowTimerView) {
+                TimerView()
             }
             
-            NavigationLink(destination: TimerView()) {
+            Button {
+                isShowTimerView.toggle()
+            } label: {
                 Text("Serve").padding(.top, 50).padding(.bottom, 10)
+            }.fullScreenCover(isPresented: $isShowTimerView) {
+                TimerView()
             }
         }.navigationBarTitleDisplayMode(.inline)
             .navigationTitle(Text("Choose Shot"))
