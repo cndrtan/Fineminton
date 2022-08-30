@@ -14,6 +14,7 @@ struct StartShotView: View {
     @State var restColor = Color("restColor")
     @State var isPractice = true
     @State var practiceSet = 1
+    @State var isEndShotView = false
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     let futureDate: Date = Calendar.current.date(byAdding: .hour, value: 1, to: Date()) ?? Date()
     
@@ -28,6 +29,8 @@ struct StartShotView: View {
         NavigationView{
             ZStack{
                 VStack{
+                    
+                    
                     Text("Set \(practiceSet) of 5").font(.system(size: 12))
                     Text("\(convertSecondsToTime(timeInSeconds:timeRemaining))").fontWeight(.bold).font(.system(size: 21))
                         .padding(.top, 15)
@@ -67,8 +70,17 @@ struct StartShotView: View {
                                 self.progressValue = 1.0
                                 timeRemaining = 60
                                 practiceSet += 1
-                                isPractice.toggle()
+                                
+                                if practiceSet == 6{
+                                    isEndShotView.toggle()
+                                }else{
+                                    isPractice.toggle()
+                                }
+                                
                             }
+                        }
+                        .sheet(isPresented: $isEndShotView) {
+                            EndShotView()
                         }
                 }
                 
