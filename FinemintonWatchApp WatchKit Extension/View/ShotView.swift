@@ -16,7 +16,7 @@ struct ShotView: View {
                 isShowTimerView.toggle()
             } label: {
                 Text("Clear/Lob").padding(.top, 50).padding(.bottom, 10)
-            }.fullScreenCover(isPresented: $isShowTimerView) {
+            }.sheet(isPresented: $isShowTimerView) {
                 TimerView()
             }
 
@@ -24,7 +24,7 @@ struct ShotView: View {
                 isShowTimerView.toggle()
             } label: {
                 Text("Smash").padding(.top, 50).padding(.bottom, 10)
-            }.fullScreenCover(isPresented: $isShowTimerView) {
+            }.sheet(isPresented: $isShowTimerView) {
                 TimerView()
             }
 
@@ -32,7 +32,7 @@ struct ShotView: View {
                 isShowTimerView.toggle()
             } label: {
                 Text("Drop Shot").padding(.top, 50).padding(.bottom, 10)
-            }.fullScreenCover(isPresented: $isShowTimerView) {
+            }.sheet(isPresented: $isShowTimerView) {
                 TimerView()
             }
             
@@ -40,7 +40,7 @@ struct ShotView: View {
                 isShowTimerView.toggle()
             } label: {
                 Text("Serve").padding(.top, 50).padding(.bottom, 10)
-            }.fullScreenCover(isPresented: $isShowTimerView) {
+            }.sheet(isPresented: $isShowTimerView) {
                 TimerView()
             }
         }.navigationBarTitleDisplayMode(.inline)

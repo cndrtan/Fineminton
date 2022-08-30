@@ -10,6 +10,7 @@ import SwiftUI
 struct TimerView: View {
     @State var progressValue: Float = 1.0
     @State var count: Int = 3
+    @State var isShowStartShotView = false
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     var body: some View {
         NavigationView{
@@ -28,7 +29,12 @@ struct TimerView: View {
                     .onReceive(timer){ _ in
                         if count >= 1 {
                             self.progressValue -= 1/3
+                        }else{
+                            isShowStartShotView = true
                         }
+                    }
+                    .sheet(isPresented: $isShowStartShotView) {
+                        StartShotView()
                     }
             }.navigationBarTitleDisplayMode(.inline)
                 .navigationTitle(Text("Clear/Lob"))

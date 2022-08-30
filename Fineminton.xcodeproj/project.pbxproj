@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2B470F9328BDD13B00A5A661 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B470F9228BDD13B00A5A661 /* TimerViewModel.swift */; };
+		2B470F9528BE09EA00A5A661 /* StartShotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B470F9428BE09EA00A5A661 /* StartShotView.swift */; };
 		2B63FA2028B3D09F008E9BAB /* FinemintonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63FA1F28B3D09F008E9BAB /* FinemintonApp.swift */; };
 		2B63FA2228B3D09F008E9BAB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63FA2128B3D09F008E9BAB /* ContentView.swift */; };
 		2B63FA2428B3D0A0008E9BAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B63FA2328B3D0A0008E9BAB /* Assets.xcassets */; };
@@ -71,6 +72,7 @@
 
 /* Begin PBXFileReference section */
 		2B470F9228BDD13B00A5A661 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
+		2B470F9428BE09EA00A5A661 /* StartShotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartShotView.swift; sourceTree = "<group>"; };
 		2B63FA1C28B3D09F008E9BAB /* Fineminton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fineminton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B63FA1F28B3D09F008E9BAB /* FinemintonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinemintonApp.swift; sourceTree = "<group>"; };
 		2B63FA2128B3D09F008E9BAB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 			children = (
 				2B63FA6C28B8CC7D008E9BAB /* ShotView.swift */,
 				2B63FA7228B8FF41008E9BAB /* TimerView.swift */,
+				2B470F9428BE09EA00A5A661 /* StartShotView.swift */,
 				2B63FA7428B8FF62008E9BAB /* ProgressBarView.swift */,
 			);
 			path = View;
@@ -370,6 +373,7 @@
 				2B63FA7328B8FF41008E9BAB /* TimerView.swift in Sources */,
 				2B63FA6D28B8CC7D008E9BAB /* ShotView.swift in Sources */,
 				2B63FA4428B3D13F008E9BAB /* NotificationController.swift in Sources */,
+				2B470F9528BE09EA00A5A661 /* StartShotView.swift in Sources */,
 				2B63FA4828B3D13F008E9BAB /* ComplicationController.swift in Sources */,
 				2B470F9328BDD13B00A5A661 /* TimerViewModel.swift in Sources */,
 				2B63FA4028B3D13F008E9BAB /* FinemintonApp.swift in Sources */,
