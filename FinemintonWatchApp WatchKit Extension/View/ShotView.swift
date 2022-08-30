@@ -8,33 +8,27 @@
 import SwiftUI
 
 struct ShotView: View {
+    @State private var isShowTimerView = false
+    
     var body: some View {
         List{
-            Button {
-                
-            } label: {
+            NavigationLink(destination: TimerView()) {
                 Text("Clear/Lob").padding(.top, 50).padding(.bottom, 10)
             }
 
-            Button {
-                
-            } label: {
+            NavigationLink(destination: TimerView()) {
                 Text("Smash").padding(.top, 50).padding(.bottom, 10)
             }
             
-            Button {
-                
-            } label: {
+            NavigationLink(destination: TimerView()) {
                 Text("Drop Shot").padding(.top, 50).padding(.bottom, 10)
             }
             
-            Button {
-                
-            } label: {
+            NavigationLink(destination: TimerView()) {
                 Text("Serve").padding(.top, 50).padding(.bottom, 10)
             }
         }.navigationBarTitleDisplayMode(.inline)
-        .navigationTitle(Text("Choose Shot"))
+            .navigationTitle(Text("Choose Shot"))
     }
 }
 
