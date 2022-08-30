@@ -9,34 +9,29 @@ import SwiftUI
 
 struct TimerView: View {
     @State var progressValue: Float = 0.0
-    //@State var seconds: String = "0"
-    @StateObject private var vm = TimerViewModel()
+    @State var count: Int = 3
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-    var limitFormatter: DateFormatter {
-        let fmtr = DateFormatter()
-        fmtr.dateFormat = "ss"
-        return fmtr
-    }
     var body: some View {
-        ZStack{
-            ProgressBarView(progress: self.$progressValue).padding()
-                .onAppear(){
-                    self.progressValue = 0
-                }
-                .onReceive(timer){ _ in
-                    self.progressValue = 0
-                }
-            
-            Text("\(vm.time)")
-                .fontWeight(.semibold).font(.system(size: 60))
-                .onAppear(){
-                    vm.startSeconds(seconds: 3.0)
-                }
-            
-        }.onReceive(timer) { _ in
-            vm.updateCountdownSeconds()
+        NavigationView{
+            ZStack{
+                Text("\(count)")
+                    .fontWeight(.semibold).font(.system(size: 60))
+                    .onReceive(timer, perform: { _ in
+                        if count <= 1 {
+                            count = 0
+                        }else{
+                            count -= 1
+                        }
+                    })
+                
+                ProgressBarView(progress: self.$progressValue).padding()
+                    .onReceive(timer){ _ in
+                        if count >= 1 {
+                            self.progressValue += (1/3)
+                        }
+                    }
+            }.navigationTitle("")
         }
-        
     }
 }
 
