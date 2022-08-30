@@ -21,6 +21,9 @@
 		2B63FA4A28B3D13F008E9BAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B63FA4928B3D13F008E9BAB /* Assets.xcassets */; };
 		2B63FA4D28B3D13F008E9BAB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B63FA4C28B3D13F008E9BAB /* Preview Assets.xcassets */; };
 		2B63FA5228B3D13F008E9BAB /* FinemintonWatchApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2B63FA3228B3D13E008E9BAB /* FinemintonWatchApp.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		38C341CA28BE1C330006F78E /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C341C928BE1C330006F78E /* TimerViewModel.swift */; };
+		38C341CC28BE1C8C0006F78E /* ProgressRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C341CB28BE1C8C0006F78E /* ProgressRingView.swift */; };
+		38C341CE28BE1CD80006F78E /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C341CD28BE1CD80006F78E /* TimerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +86,9 @@
 		2B63FA4C28B3D13F008E9BAB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2B63FA4E28B3D13F008E9BAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B63FA4F28B3D13F008E9BAB /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		38C341C928BE1C330006F78E /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
+		38C341CB28BE1C8C0006F78E /* ProgressRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRingView.swift; sourceTree = "<group>"; };
+		38C341CD28BE1CD80006F78E /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +154,7 @@
 		2B63FA2D28B3D0D1008E9BAB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				38C341C928BE1C330006F78E /* TimerViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -155,6 +162,8 @@
 		2B63FA2E28B3D0D1008E9BAB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				38C341CB28BE1C8C0006F78E /* ProgressRingView.swift */,
+				38C341CD28BE1CD80006F78E /* TimerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -329,7 +338,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38C341CE28BE1CD80006F78E /* TimerView.swift in Sources */,
 				2B63FA2228B3D09F008E9BAB /* ContentView.swift in Sources */,
+				38C341CC28BE1C8C0006F78E /* ProgressRingView.swift in Sources */,
+				38C341CA28BE1C330006F78E /* TimerViewModel.swift in Sources */,
 				2B63FA2028B3D09F008E9BAB /* FinemintonApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -492,6 +504,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -521,6 +534,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
