@@ -12,14 +12,30 @@ struct TutorialView: View {
     var body: some View {
         NavigationView {
             TabView {
-                VideoPlayerView(data: self.viewModel.tutorialSteps[0]).padding(.horizontal)
-                VideoPlayerView(data: self.viewModel.tutorialSteps[1]).padding(.horizontal)
-                VideoPlayerView(data: self.viewModel.tutorialSteps[2]).padding(.horizontal)
-                VideoPlayerView(data: self.viewModel.tutorialSteps[3]).padding(.horizontal)
+//                VideoPlayerView(data: self.viewModel.tutorialSteps[0]).padding(.horizontal)
+//                VideoPlayerView(data: self.viewModel.tutorialSteps[1]).padding(.horizontal)
+//                VideoPlayerView(data: self.viewModel.tutorialSteps[2]).padding(.horizontal)
+//                VideoPlayerView(data: self.viewModel.tutorialSteps[3]).padding(.horizontal)
+                ForEach(self.viewModel.tutorialSteps) { step in
+                    VideoPlayerView(data: step).padding(.horizontal)
+                }
             }
             .tabViewStyle(.page)
             .indexViewStyle(.page(backgroundDisplayMode: .always))
-            .navigationTitle("Tutorial")
+            .padding(.top)
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar{
+                ToolbarItem(placement: .principal){
+                    HStack{
+                        Text("Tutorial View")
+                            .font(.largeTitle)
+                            .bold()
+                            .padding(.vertical)
+                        Spacer()
+                    }
+                    
+                }
+            }
         }
     }
 }
