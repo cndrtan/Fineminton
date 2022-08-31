@@ -42,6 +42,10 @@
 		5C4854FB28BF5DA2008FE1FB /* TutorialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4854FA28BF5DA2008FE1FB /* TutorialViewModel.swift */; };
 		5C4854FD28BF5DB8008FE1FB /* TutorialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4854FC28BF5DB8008FE1FB /* TutorialModel.swift */; };
 		5C48550028BF5DEF008FE1FB /* TutorialStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4854FF28BF5DEF008FE1FB /* TutorialStep.swift */; };
+		5C48550628BF753F008FE1FB /* tahap_3_clear_shot_detail_tangan.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 5C48550228BF753F008FE1FB /* tahap_3_clear_shot_detail_tangan.mp4 */; };
+		5C48550728BF753F008FE1FB /* tahap_6_clear_shot_fast.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 5C48550328BF753F008FE1FB /* tahap_6_clear_shot_fast.mp4 */; };
+		5C48550828BF753F008FE1FB /* tahap_4_clear_shot_tutorial_footwork.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 5C48550428BF753F008FE1FB /* tahap_4_clear_shot_tutorial_footwork.mp4 */; };
+		5C48550928BF753F008FE1FB /* tahap_5_clear_shot.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 5C48550528BF753F008FE1FB /* tahap_5_clear_shot.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +128,10 @@
 		5C4854FA28BF5DA2008FE1FB /* TutorialViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewModel.swift; sourceTree = "<group>"; };
 		5C4854FC28BF5DB8008FE1FB /* TutorialModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialModel.swift; sourceTree = "<group>"; };
 		5C4854FF28BF5DEF008FE1FB /* TutorialStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialStep.swift; sourceTree = "<group>"; };
+		5C48550228BF753F008FE1FB /* tahap_3_clear_shot_detail_tangan.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = tahap_3_clear_shot_detail_tangan.mp4; sourceTree = "<group>"; };
+		5C48550328BF753F008FE1FB /* tahap_6_clear_shot_fast.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = tahap_6_clear_shot_fast.mp4; sourceTree = "<group>"; };
+		5C48550428BF753F008FE1FB /* tahap_4_clear_shot_tutorial_footwork.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = tahap_4_clear_shot_tutorial_footwork.mp4; sourceTree = "<group>"; };
+		5C48550528BF753F008FE1FB /* tahap_5_clear_shot.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = tahap_5_clear_shot.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +184,7 @@
 		2B63FA1E28B3D09F008E9BAB /* Fineminton */ = {
 			isa = PBXGroup;
 			children = (
+				5C48550128BF7523008FE1FB /* Video */,
 				2B63FA2F28B3D0D1008E9BAB /* Model */,
 				2B63FA2E28B3D0D1008E9BAB /* View */,
 				2B63FA2D28B3D0D1008E9BAB /* ViewModel */,
@@ -284,6 +293,17 @@
 			path = Entitiy;
 			sourceTree = "<group>";
 		};
+		5C48550128BF7523008FE1FB /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				5C48550228BF753F008FE1FB /* tahap_3_clear_shot_detail_tangan.mp4 */,
+				5C48550428BF753F008FE1FB /* tahap_4_clear_shot_tutorial_footwork.mp4 */,
+				5C48550528BF753F008FE1FB /* tahap_5_clear_shot.mp4 */,
+				5C48550328BF753F008FE1FB /* tahap_6_clear_shot_fast.mp4 */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -386,6 +406,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C48550928BF753F008FE1FB /* tahap_5_clear_shot.mp4 in Resources */,
+				5C48550828BF753F008FE1FB /* tahap_4_clear_shot_tutorial_footwork.mp4 in Resources */,
+				5C48550728BF753F008FE1FB /* tahap_6_clear_shot_fast.mp4 in Resources */,
+				5C48550628BF753F008FE1FB /* tahap_3_clear_shot_detail_tangan.mp4 in Resources */,
 				38C341B628B8CD880006F78E /* ShotData.json in Resources */,
 				2B63FA2728B3D0A0008E9BAB /* Preview Assets.xcassets in Resources */,
 				2B63FA2428B3D0A0008E9BAB /* Assets.xcassets in Resources */,

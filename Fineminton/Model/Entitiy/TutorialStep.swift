@@ -15,4 +15,8 @@ public struct TutorialStep: Identifiable {
     public var description: String = ""
     public var mediaType: String = "video" // or "image"
     public var showActionButton: Bool = false
+    
+//    public func mediaSourceURL() -> URL {
+//        return Bundle.main.url(forResource: self.mediaSource, withExtension: "mp4")
+//    }
 }

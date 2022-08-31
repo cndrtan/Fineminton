@@ -20,8 +20,11 @@ struct VideoPlayerView: View {
                     Text(self.data.title)
                     Spacer()
                 }//.padding(.bottom)
-                VideoPlayer(player: AVPlayer(url: URL(string: self.data.mediaSource)!))
-                    .frame(height: (geometry.size.height * 0.65)).cornerRadius(10)
+                //                VideoPlayer(player: AVPlayer(url: URL(string: self.data.mediaSource)!))
+                if self.data.mediaType == "video" {
+                    VideoPlayer(player: AVPlayer(url: Bundle.main.url(forResource: self.data.mediaSource, withExtension: "mp4")!))
+                        .frame(height: (geometry.size.height * 0.65)).cornerRadius(10)
+                }
                 HStack() {
                     Text(self.data.description)
                         .multilineTextAlignment(.leading).font(.caption)
