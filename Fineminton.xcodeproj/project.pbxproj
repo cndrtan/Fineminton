@@ -11,7 +11,6 @@
 		2B470F9728BE1FA200A5A661 /* EndShotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B470F9628BE1FA200A5A661 /* EndShotView.swift */; };
 		2B470F9A28BF453300A5A661 /* TitleSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B470F9928BF453300A5A661 /* TitleSettings.swift */; };
 		2B63FA2028B3D09F008E9BAB /* FinemintonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63FA1F28B3D09F008E9BAB /* FinemintonApp.swift */; };
-		2B63FA2228B3D09F008E9BAB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63FA2128B3D09F008E9BAB /* ContentView.swift */; };
 		2B63FA2428B3D0A0008E9BAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B63FA2328B3D0A0008E9BAB /* Assets.xcassets */; };
 		2B63FA2728B3D0A0008E9BAB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B63FA2628B3D0A0008E9BAB /* Preview Assets.xcassets */; };
 		2B63FA3528B3D13E008E9BAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B63FA3428B3D13E008E9BAB /* Assets.xcassets */; };
@@ -23,20 +22,20 @@
 		2B63FA4A28B3D13F008E9BAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B63FA4928B3D13F008E9BAB /* Assets.xcassets */; };
 		2B63FA4D28B3D13F008E9BAB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B63FA4C28B3D13F008E9BAB /* Preview Assets.xcassets */; };
 		2B63FA5228B3D13F008E9BAB /* FinemintonWatchApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2B63FA3228B3D13E008E9BAB /* FinemintonWatchApp.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2B63FA6D28B8CC7D008E9BAB /* ShotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63FA6C28B8CC7D008E9BAB /* ShotView.swift */; };
+		2B63FA6F28B8CD78008E9BAB /* ShotData.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B63FA6E28B8CD78008E9BAB /* ShotData.json */; };
+		2B63FA7328B8FF41008E9BAB /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63FA7228B8FF41008E9BAB /* TimerView.swift */; };
+		2B63FA7528B8FF62008E9BAB /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63FA7428B8FF62008E9BAB /* ProgressBarView.swift */; };
 		38C341B428B8CD490006F78E /* Shot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C341B328B8CD490006F78E /* Shot.swift */; };
 		38C341B628B8CD880006F78E /* ShotData.json in Resources */ = {isa = PBXBuildFile; fileRef = 38C341B528B8CD880006F78E /* ShotData.json */; };
 		38C341B828B8CDB70006F78E /* ShotViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C341B728B8CDB70006F78E /* ShotViewModel.swift */; };
 		38C341BA28BC98360006F78E /* ShotInstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C341B928BC98360006F78E /* ShotInstructionView.swift */; };
 		38C341BC28BC98F60006F78E /* ShotItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C341BB28BC98F60006F78E /* ShotItemView.swift */; };
 		38C341BE28BC99710006F78E /* ChooseShotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C341BD28BC99710006F78E /* ChooseShotView.swift */; };
-		38C341D028BF42F50006F78E /* DummyTutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C341CF28BF42F50006F78E /* DummyTutorialView.swift */; };
-		2B63FA6D28B8CC7D008E9BAB /* ShotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63FA6C28B8CC7D008E9BAB /* ShotView.swift */; };
 		38C341CA28BE1C330006F78E /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C341C928BE1C330006F78E /* TimerViewModel.swift */; };
 		38C341CC28BE1C8C0006F78E /* ProgressRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C341CB28BE1C8C0006F78E /* ProgressRingView.swift */; };
 		38C341CE28BE1CD80006F78E /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C341CD28BE1CD80006F78E /* TimerView.swift */; };
-		2B63FA6F28B8CD78008E9BAB /* ShotData.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B63FA6E28B8CD78008E9BAB /* ShotData.json */; };
-		2B63FA7328B8FF41008E9BAB /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63FA7228B8FF41008E9BAB /* TimerView.swift */; };
-		2B63FA7528B8FF62008E9BAB /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63FA7428B8FF62008E9BAB /* ProgressBarView.swift */; };
+		38C341D028BF42F50006F78E /* DummyTutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C341CF28BF42F50006F78E /* DummyTutorialView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,7 +86,6 @@
 		2B470F9928BF453300A5A661 /* TitleSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSettings.swift; sourceTree = "<group>"; };
 		2B63FA1C28B3D09F008E9BAB /* Fineminton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fineminton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B63FA1F28B3D09F008E9BAB /* FinemintonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinemintonApp.swift; sourceTree = "<group>"; };
-		2B63FA2128B3D09F008E9BAB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2B63FA2328B3D0A0008E9BAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B63FA2628B3D0A0008E9BAB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2B63FA3228B3D13E008E9BAB /* FinemintonWatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinemintonWatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,20 +99,20 @@
 		2B63FA4C28B3D13F008E9BAB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2B63FA4E28B3D13F008E9BAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B63FA4F28B3D13F008E9BAB /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		2B63FA6C28B8CC7D008E9BAB /* ShotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotView.swift; sourceTree = "<group>"; };
+		2B63FA6E28B8CD78008E9BAB /* ShotData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ShotData.json; sourceTree = "<group>"; };
+		2B63FA7228B8FF41008E9BAB /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		2B63FA7428B8FF62008E9BAB /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 		38C341B328B8CD490006F78E /* Shot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shot.swift; sourceTree = "<group>"; };
 		38C341B528B8CD880006F78E /* ShotData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ShotData.json; sourceTree = "<group>"; };
 		38C341B728B8CDB70006F78E /* ShotViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotViewModel.swift; sourceTree = "<group>"; };
 		38C341B928BC98360006F78E /* ShotInstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotInstructionView.swift; sourceTree = "<group>"; };
 		38C341BB28BC98F60006F78E /* ShotItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotItemView.swift; sourceTree = "<group>"; };
 		38C341BD28BC99710006F78E /* ChooseShotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseShotView.swift; sourceTree = "<group>"; };
-		38C341CF28BF42F50006F78E /* DummyTutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyTutorialView.swift; sourceTree = "<group>"; };
-		2B63FA6C28B8CC7D008E9BAB /* ShotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotView.swift; sourceTree = "<group>"; };
 		38C341C928BE1C330006F78E /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
 		38C341CB28BE1C8C0006F78E /* ProgressRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRingView.swift; sourceTree = "<group>"; };
 		38C341CD28BE1CD80006F78E /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
-		2B63FA6E28B8CD78008E9BAB /* ShotData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ShotData.json; sourceTree = "<group>"; };
-		2B63FA7228B8FF41008E9BAB /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
-		2B63FA7428B8FF62008E9BAB /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
+		38C341CF28BF42F50006F78E /* DummyTutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyTutorialView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,7 +169,6 @@
 				2B63FA2E28B3D0D1008E9BAB /* View */,
 				2B63FA2D28B3D0D1008E9BAB /* ViewModel */,
 				2B63FA1F28B3D09F008E9BAB /* FinemintonApp.swift */,
-				2B63FA2128B3D09F008E9BAB /* ContentView.swift */,
 				2B63FA2328B3D0A0008E9BAB /* Assets.xcassets */,
 				2B63FA2528B3D0A0008E9BAB /* Preview Content */,
 			);
@@ -400,11 +397,9 @@
 				38C341BC28BC98F60006F78E /* ShotItemView.swift in Sources */,
 				38C341B428B8CD490006F78E /* Shot.swift in Sources */,
 				38C341BA28BC98360006F78E /* ShotInstructionView.swift in Sources */,
-				2B63FA2228B3D09F008E9BAB /* ContentView.swift in Sources */,
 				38C341D028BF42F50006F78E /* DummyTutorialView.swift in Sources */,
 				38C341BE28BC99710006F78E /* ChooseShotView.swift in Sources */,
 				38C341CE28BE1CD80006F78E /* TimerView.swift in Sources */,
-				2B63FA2228B3D09F008E9BAB /* ContentView.swift in Sources */,
 				38C341CC28BE1C8C0006F78E /* ProgressRingView.swift in Sources */,
 				38C341CA28BE1C330006F78E /* TimerViewModel.swift in Sources */,
 				2B63FA2028B3D09F008E9BAB /* FinemintonApp.swift in Sources */,
