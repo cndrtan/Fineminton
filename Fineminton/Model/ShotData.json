@@ -1,0 +1,36 @@
+[
+    {
+        "id": 1,
+        "shotName": "Lob / Clear",
+        "shotImage": "lob shot",
+        "shotSummary": "Pukulan jauh",
+        "shotDescription": "Jenis pukulan yang paling direkomendasikan untuk mengambil waktu dengan tujuan menengahkan lapangan adalah pukulan clear yang mendalam.Ketika anda bingung, pukulan clear bisa menjadi hal pertama yang anda lakukan. Pukulan clear yang digunakan untuk bertahan dapat disamakan dengan pukulan lob pada tenis.",
+        "isOpen": true
+    },
+    {
+        "id": 2,
+        "shotName": "Smash",
+        "shotImage": "smash shot",
+        "shotSummary": "pukulan keras ke daerah lawan",
+        "shotDescription": "Jenis pukulan yang paling direkomendasikan untuk mengambil waktu dengan tujuan menengahkan lapangan adalah pukulan clear yang mendalam.Ketika anda bingung, pukulan clear bisa menjadi hal pertama yang anda lakukan. Pukulan clear yang digunakan untuk bertahan dapat disamakan dengan pukulan lob pada tenis.",
+        "isOpen": false
+    },
+    {
+        "id": 3,
+        "shotName": "Drop Shot",
+        "shotImage": "drop shot",
+        "shotSummary": "pukulan rendah di atas net",
+        "shotDescription": "Jenis pukulan yang paling direkomendasikan untuk mengambil waktu dengan tujuan menengahkan lapangan adalah pukulan clear yang mendalam.Ketika anda bingung, pukulan clear bisa menjadi hal pertama yang anda lakukan. Pukulan clear yang digunakan untuk bertahan dapat disamakan dengan pukulan lob pada tenis.",
+        "isOpen": false
+    },
+    {
+        "id": 4,
+        "shotName": "Serve",
+        "shotImage": "serve shot",
+        "shotSummary": "pukulan ke daerah lawan",
+        "shotDescription": "Jenis pukulan yang paling direkomendasikan untuk mengambil waktu dengan tujuan menengahkan lapangan adalah pukulan clear yang mendalam.Ketika anda bingung, pukulan clear bisa menjadi hal pertama yang anda lakukan. Pukulan clear yang digunakan untuk bertahan dapat disamakan dengan pukulan lob pada tenis.",
+        "isOpen": false
+    }
+]
+ 
+
