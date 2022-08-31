@@ -14,7 +14,6 @@
 		2B63FA3528B3D13E008E9BAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B63FA3428B3D13E008E9BAB /* Assets.xcassets */; };
 		2B63FA3B28B3D13F008E9BAB /* FinemintonWatchApp WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2B63FA3A28B3D13F008E9BAB /* FinemintonWatchApp WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2B63FA4028B3D13F008E9BAB /* FinemintonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63FA3F28B3D13F008E9BAB /* FinemintonApp.swift */; };
-		2B63FA4228B3D13F008E9BAB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63FA4128B3D13F008E9BAB /* ContentView.swift */; };
 		2B63FA4428B3D13F008E9BAB /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63FA4328B3D13F008E9BAB /* NotificationController.swift */; };
 		2B63FA4628B3D13F008E9BAB /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63FA4528B3D13F008E9BAB /* NotificationView.swift */; };
 		2B63FA4828B3D13F008E9BAB /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63FA4728B3D13F008E9BAB /* ComplicationController.swift */; };
@@ -28,6 +27,7 @@
 		38C341BC28BC98F60006F78E /* ShotItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C341BB28BC98F60006F78E /* ShotItemView.swift */; };
 		38C341BE28BC99710006F78E /* ChooseShotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C341BD28BC99710006F78E /* ChooseShotView.swift */; };
 		38C341D028BF42F50006F78E /* DummyTutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C341CF28BF42F50006F78E /* DummyTutorialView.swift */; };
+		2B63FA6D28B8CC7D008E9BAB /* ShotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63FA6C28B8CC7D008E9BAB /* ShotView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,7 +82,6 @@
 		2B63FA3428B3D13E008E9BAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B63FA3A28B3D13F008E9BAB /* FinemintonWatchApp WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "FinemintonWatchApp WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B63FA3F28B3D13F008E9BAB /* FinemintonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinemintonApp.swift; sourceTree = "<group>"; };
-		2B63FA4128B3D13F008E9BAB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2B63FA4328B3D13F008E9BAB /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		2B63FA4528B3D13F008E9BAB /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		2B63FA4728B3D13F008E9BAB /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
@@ -97,6 +96,7 @@
 		38C341BB28BC98F60006F78E /* ShotItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotItemView.swift; sourceTree = "<group>"; };
 		38C341BD28BC99710006F78E /* ChooseShotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseShotView.swift; sourceTree = "<group>"; };
 		38C341CF28BF42F50006F78E /* DummyTutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyTutorialView.swift; sourceTree = "<group>"; };
+		2B63FA6C28B8CC7D008E9BAB /* ShotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,8 +198,9 @@
 		2B63FA3E28B3D13F008E9BAB /* FinemintonWatchApp WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				2B63FA6E28B8CD78008E9BAB /* ShotData.json */,
+				2B63FA6928B8CC5F008E9BAB /* View */,
 				2B63FA3F28B3D13F008E9BAB /* FinemintonApp.swift */,
-				2B63FA4128B3D13F008E9BAB /* ContentView.swift */,
 				2B63FA4328B3D13F008E9BAB /* NotificationController.swift */,
 				2B63FA4528B3D13F008E9BAB /* NotificationView.swift */,
 				2B63FA4728B3D13F008E9BAB /* ComplicationController.swift */,
@@ -217,6 +218,14 @@
 				2B63FA4C28B3D13F008E9BAB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2B63FA6928B8CC5F008E9BAB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B63FA6C28B8CC7D008E9BAB /* ShotView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,6 +348,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B63FA6F28B8CD78008E9BAB /* ShotData.json in Resources */,
 				2B63FA4D28B3D13F008E9BAB /* Preview Assets.xcassets in Resources */,
 				2B63FA4A28B3D13F008E9BAB /* Assets.xcassets in Resources */,
 			);
@@ -366,8 +376,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B63FA6D28B8CC7D008E9BAB /* ShotView.swift in Sources */,
 				2B63FA4428B3D13F008E9BAB /* NotificationController.swift in Sources */,
-				2B63FA4228B3D13F008E9BAB /* ContentView.swift in Sources */,
 				2B63FA4828B3D13F008E9BAB /* ComplicationController.swift in Sources */,
 				2B63FA4028B3D13F008E9BAB /* FinemintonApp.swift in Sources */,
 				2B63FA4628B3D13F008E9BAB /* NotificationView.swift in Sources */,
