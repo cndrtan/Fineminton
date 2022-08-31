@@ -11,6 +11,7 @@ import AVKit
 struct VideoPlayerView: View {
     
     @State public var data: TutorialStep = TutorialStep()
+    @State private var isDrilling: Bool = false
     
     var body: some View {
         GeometryReader { geometry in
@@ -28,7 +29,7 @@ struct VideoPlayerView: View {
                 }.padding(4)
                 if self.data.showActionButton {
                     Button(action: {
-                        print("sign up bin tapped")
+                        isDrilling.toggle()
                     }) {
                         Text("Mulai Latihan")
                             .frame(minWidth: 0, maxWidth: .infinity)
@@ -42,6 +43,10 @@ struct VideoPlayerView: View {
                     }
                     .background(Color.blue)
                     .cornerRadius(10)
+                    .fullScreenCover(isPresented: $isDrilling){
+                        TimerView()
+                            .environmentObject(TimerViewModel())
+                    }
                 }
             }
         }
