@@ -11,8 +11,7 @@ import SwiftUI
 struct FinemintonApp: App {
     var body: some Scene {
         WindowGroup {
-            //ContentView()
-            TutorialView()
+            ChooseShotView()
         }
     }
 }
