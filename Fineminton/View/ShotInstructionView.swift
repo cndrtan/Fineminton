@@ -67,7 +67,7 @@ struct ShotInstructionView: View {
                         Spacer()
                     }
                     Spacer()
-                    NavigationLink(destination: DummyTutorialView()){
+                    NavigationLink(destination: TutorialView()){
                         Text("Lanjut")
                             .fontWeight(.bold)
                             .frame(width: 348, height: 47)
