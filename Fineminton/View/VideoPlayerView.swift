@@ -25,6 +25,9 @@ struct VideoPlayerView: View {
                     VideoPlayer(player: AVPlayer(url: Bundle.main.url(forResource: self.data.mediaSource, withExtension: "mp4")!))
                         .frame(height: (geometry.size.height * 0.65)).cornerRadius(10)
                 }
+                else {
+                    Image(self.data.mediaSource).resizable().scaledToFit().frame(/*width: (geometry.size.width * 1),*/ height: (geometry.size.height * 0.65)).cornerRadius(10)
+                }
                 HStack() {
                     Text(self.data.description)
                         .multilineTextAlignment(.leading).font(.caption)
