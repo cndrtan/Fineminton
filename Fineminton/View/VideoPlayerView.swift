@@ -19,25 +19,30 @@ struct VideoPlayerView: View {
                     Text(self.data.title)
                     Spacer()
                 }//.padding(.bottom)
-                VideoPlayer(player: AVPlayer(url:  URL(string: self.data.videoURL)!))
+                VideoPlayer(player: AVPlayer(url: URL(string: self.data.mediaSource)!))
                     .frame(height: (geometry.size.height * 0.65)).cornerRadius(10)
-                Text(self.data.description)
-                    .multilineTextAlignment(.leading)//.padding(.vertical)
-                Button(action: {
-                    print("sign up bin tapped")
-                }) {
-                    Text("Mulai Latihan")
-                        .frame(minWidth: 0, maxWidth: .infinity)
-                        .font(.system(size: 18))
-                        .padding()
-                        .foregroundColor(.white)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color.white, lineWidth: 2)
-                        )
+                HStack() {
+                    Text(self.data.description)
+                        .multilineTextAlignment(.leading).font(.caption)
+                    Spacer()
+                }.padding(4)
+                if self.data.showActionButton {
+                    Button(action: {
+                        print("sign up bin tapped")
+                    }) {
+                        Text("Mulai Latihan")
+                            .frame(minWidth: 0, maxWidth: .infinity)
+                            .font(.system(size: 18))
+                            .padding()
+                            .foregroundColor(.white)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.white, lineWidth: 2)
+                            )
+                    }
+                    .background(Color.blue)
+                    .cornerRadius(10)
                 }
-                .background(Color.blue)
-                .cornerRadius(10)
             }
         }
     }
