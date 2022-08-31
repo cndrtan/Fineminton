@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B470F9328BDD13B00A5A661 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B470F9228BDD13B00A5A661 /* TimerViewModel.swift */; };
 		2B470F9528BE09EA00A5A661 /* StartShotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B470F9428BE09EA00A5A661 /* StartShotView.swift */; };
 		2B470F9728BE1FA200A5A661 /* EndShotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B470F9628BE1FA200A5A661 /* EndShotView.swift */; };
+		2B470F9A28BF453300A5A661 /* TitleSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B470F9928BF453300A5A661 /* TitleSettings.swift */; };
 		2B63FA2028B3D09F008E9BAB /* FinemintonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63FA1F28B3D09F008E9BAB /* FinemintonApp.swift */; };
 		2B63FA2228B3D09F008E9BAB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63FA2128B3D09F008E9BAB /* ContentView.swift */; };
 		2B63FA2428B3D0A0008E9BAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B63FA2328B3D0A0008E9BAB /* Assets.xcassets */; };
@@ -72,9 +72,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2B470F9228BDD13B00A5A661 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
 		2B470F9428BE09EA00A5A661 /* StartShotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartShotView.swift; sourceTree = "<group>"; };
 		2B470F9628BE1FA200A5A661 /* EndShotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndShotView.swift; sourceTree = "<group>"; };
+		2B470F9928BF453300A5A661 /* TitleSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSettings.swift; sourceTree = "<group>"; };
 		2B63FA1C28B3D09F008E9BAB /* Fineminton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fineminton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B63FA1F28B3D09F008E9BAB /* FinemintonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinemintonApp.swift; sourceTree = "<group>"; };
 		2B63FA2128B3D09F008E9BAB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -115,13 +115,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2B470F9128BDD12100A5A661 /* ViewModel */ = {
+		2B470F9828BF44FA00A5A661 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2B470F9228BDD13B00A5A661 /* TimerViewModel.swift */,
+				2B470F9928BF453300A5A661 /* TitleSettings.swift */,
 			);
-			path = ViewModel;
-			sourceTree = "<group>";
+			name = Model;
+			path = "FinemintonWatchApp WatchKit Extension/Model";
+			sourceTree = SOURCE_ROOT;
 		};
 		2B63FA1328B3D09F008E9BAB = {
 			isa = PBXGroup;
@@ -198,7 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				2B63FA6E28B8CD78008E9BAB /* ShotData.json */,
-				2B470F9128BDD12100A5A661 /* ViewModel */,
+				2B470F9828BF44FA00A5A661 /* Model */,
 				2B63FA6928B8CC5F008E9BAB /* View */,
 				2B63FA3F28B3D13F008E9BAB /* FinemintonApp.swift */,
 				2B63FA4328B3D13F008E9BAB /* NotificationController.swift */,
@@ -373,13 +374,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B470F9A28BF453300A5A661 /* TitleSettings.swift in Sources */,
 				2B470F9728BE1FA200A5A661 /* EndShotView.swift in Sources */,
 				2B63FA7328B8FF41008E9BAB /* TimerView.swift in Sources */,
 				2B63FA6D28B8CC7D008E9BAB /* ShotView.swift in Sources */,
 				2B63FA4428B3D13F008E9BAB /* NotificationController.swift in Sources */,
 				2B470F9528BE09EA00A5A661 /* StartShotView.swift in Sources */,
 				2B63FA4828B3D13F008E9BAB /* ComplicationController.swift in Sources */,
-				2B470F9328BDD13B00A5A661 /* TimerViewModel.swift in Sources */,
 				2B63FA4028B3D13F008E9BAB /* FinemintonApp.swift in Sources */,
 				2B63FA4628B3D13F008E9BAB /* NotificationView.swift in Sources */,
 				2B63FA7528B8FF62008E9BAB /* ProgressBarView.swift in Sources */,

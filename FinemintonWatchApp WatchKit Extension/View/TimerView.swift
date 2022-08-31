@@ -13,7 +13,11 @@ struct TimerView: View {
     @State var isShowStartShotView = false
     @State var practiceColor = Color("practiceColor")
     @State var restColor = Color("restColor")
+    
+    @EnvironmentObject var title: TitleSettings
+    
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    
     var body: some View {
         NavigationView{
             ZStack{
@@ -39,7 +43,7 @@ struct TimerView: View {
                         StartShotView()
                     }
             }.navigationBarTitleDisplayMode(.inline)
-                .navigationTitle(Text("Clear/Lob"))
+                .navigationTitle(Text("\(self.title.titleName)"))
         }
     }
 }

@@ -9,11 +9,13 @@ import SwiftUI
 
 struct ShotView: View {
     @State private var isShowTimerView = false
+    @EnvironmentObject var title: TitleSettings
     
     var body: some View {
         List{
             Button {
                 isShowTimerView.toggle()
+                self.title.titleName = "Clear/Lob"
             } label: {
                 Text("Clear/Lob").padding(.top, 50).padding(.bottom, 10)
             }.sheet(isPresented: $isShowTimerView) {
@@ -22,6 +24,7 @@ struct ShotView: View {
 
             Button {
                 isShowTimerView.toggle()
+                self.title.titleName = "Smash"
             } label: {
                 Text("Smash").padding(.top, 50).padding(.bottom, 10)
             }.sheet(isPresented: $isShowTimerView) {
@@ -30,6 +33,7 @@ struct ShotView: View {
 
             Button {
                 isShowTimerView.toggle()
+                self.title.titleName = "Drop Shot"
             } label: {
                 Text("Drop Shot").padding(.top, 50).padding(.bottom, 10)
             }.sheet(isPresented: $isShowTimerView) {
@@ -38,6 +42,7 @@ struct ShotView: View {
             
             Button {
                 isShowTimerView.toggle()
+                self.title.titleName = "Serve"
             } label: {
                 Text("Serve").padding(.top, 50).padding(.bottom, 10)
             }.sheet(isPresented: $isShowTimerView) {
@@ -50,6 +55,6 @@ struct ShotView: View {
 
 struct ShotView_Previews: PreviewProvider {
     static var previews: some View {
-        ShotView()
+        ShotView().environmentObject(TitleSettings())
     }
 }

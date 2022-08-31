@@ -9,12 +9,15 @@ import SwiftUI
 
 struct EndShotView: View {
     @State var isShotView = false
+    
+    @EnvironmentObject var title: TitleSettings
+    
     var body: some View {
         NavigationView{
             VStack{
                 Spacer()
                 
-                Text("Clear/Lob Shot \n practice session has \n been done").font(.system(size: 17)).multilineTextAlignment(.center)
+                Text("\(self.title.titleName) Shot \n practice session has \n been done").font(.system(size: 17)).multilineTextAlignment(.center)
                 
                 Spacer()
                 
@@ -26,7 +29,7 @@ struct EndShotView: View {
                     ShotView()
                 }
             }.navigationBarTitleDisplayMode(.inline)
-                .navigationTitle("Clear/Lob")
+                .navigationTitle("\(self.title.titleName)")
         }
     }
 }

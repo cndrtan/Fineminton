@@ -12,7 +12,7 @@ struct FinemintonApp: App {
     @SceneBuilder var body: some Scene {
         WindowGroup {
             NavigationView {
-                ShotView()
+                ShotView().environmentObject(TitleSettings())
             }
         }
 

@@ -15,6 +15,9 @@ struct StartShotView: View {
     @State var isPractice = true
     @State var practiceSet = 1
     @State var isEndShotView = false
+    
+    @EnvironmentObject var title: TitleSettings
+    
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     let futureDate: Date = Calendar.current.date(byAdding: .hour, value: 1, to: Date()) ?? Date()
     
@@ -85,7 +88,7 @@ struct StartShotView: View {
                 }
                 
             }.navigationBarTitleDisplayMode(.inline)
-                .navigationTitle("Clear/Lob")
+                .navigationTitle("\(self.title.titleName)")
         }
     }
 }
