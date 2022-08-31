@@ -10,6 +10,7 @@
 		2B470F9528BE09EA00A5A661 /* StartShotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B470F9428BE09EA00A5A661 /* StartShotView.swift */; };
 		2B470F9728BE1FA200A5A661 /* EndShotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B470F9628BE1FA200A5A661 /* EndShotView.swift */; };
 		2B470F9A28BF453300A5A661 /* TitleSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B470F9928BF453300A5A661 /* TitleSettings.swift */; };
+		2B470F9F28BF5E2900A5A661 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B63FA2328B3D0A0008E9BAB /* Assets.xcassets */; };
 		2B63FA2028B3D09F008E9BAB /* FinemintonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63FA1F28B3D09F008E9BAB /* FinemintonApp.swift */; };
 		2B63FA2428B3D0A0008E9BAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B63FA2328B3D0A0008E9BAB /* Assets.xcassets */; };
 		2B63FA2728B3D0A0008E9BAB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B63FA2628B3D0A0008E9BAB /* Preview Assets.xcassets */; };
@@ -382,6 +383,7 @@
 			files = (
 				2B63FA6F28B8CD78008E9BAB /* ShotData.json in Resources */,
 				2B63FA4D28B3D13F008E9BAB /* Preview Assets.xcassets in Resources */,
+				2B470F9F28BF5E2900A5A661 /* Assets.xcassets in Resources */,
 				2B63FA4A28B3D13F008E9BAB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
