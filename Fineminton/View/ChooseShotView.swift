@@ -46,6 +46,7 @@ struct ChooseShotView: View {
                 }
             }
         }
+        .navigationViewStyle(.stack)
     }
     
 }

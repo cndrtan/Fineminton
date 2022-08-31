@@ -27,6 +27,7 @@
 		38C341BA28BC98360006F78E /* ShotInstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C341B928BC98360006F78E /* ShotInstructionView.swift */; };
 		38C341BC28BC98F60006F78E /* ShotItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C341BB28BC98F60006F78E /* ShotItemView.swift */; };
 		38C341BE28BC99710006F78E /* ChooseShotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C341BD28BC99710006F78E /* ChooseShotView.swift */; };
+		38C341D028BF42F50006F78E /* DummyTutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C341CF28BF42F50006F78E /* DummyTutorialView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		38C341B928BC98360006F78E /* ShotInstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotInstructionView.swift; sourceTree = "<group>"; };
 		38C341BB28BC98F60006F78E /* ShotItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotItemView.swift; sourceTree = "<group>"; };
 		38C341BD28BC99710006F78E /* ChooseShotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseShotView.swift; sourceTree = "<group>"; };
+		38C341CF28BF42F50006F78E /* DummyTutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyTutorialView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 				38C341B928BC98360006F78E /* ShotInstructionView.swift */,
 				38C341BB28BC98F60006F78E /* ShotItemView.swift */,
 				38C341BD28BC99710006F78E /* ChooseShotView.swift */,
+				38C341CF28BF42F50006F78E /* DummyTutorialView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				38C341B428B8CD490006F78E /* Shot.swift in Sources */,
 				38C341BA28BC98360006F78E /* ShotInstructionView.swift in Sources */,
 				2B63FA2228B3D09F008E9BAB /* ContentView.swift in Sources */,
+				38C341D028BF42F50006F78E /* DummyTutorialView.swift in Sources */,
 				38C341BE28BC99710006F78E /* ChooseShotView.swift in Sources */,
 				2B63FA2028B3D09F008E9BAB /* FinemintonApp.swift in Sources */,
 			);

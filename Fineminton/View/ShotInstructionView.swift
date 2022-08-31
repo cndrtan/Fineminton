@@ -67,8 +67,16 @@ struct ShotInstructionView: View {
                         Spacer()
                     }
                     Spacer()
-                    nextButton
-                        .padding(.top)
+                    NavigationLink(destination: DummyTutorialView()){
+                        Text("Lanjut")
+                            .fontWeight(.bold)
+                            .frame(width: 348, height: 47)
+                            .background(.blue)
+                            .foregroundColor(Color.white)
+                            .cornerRadius(8)
+                            .padding(.top)
+                    }
+                    
                         
                 }.padding(.horizontal)
             }
