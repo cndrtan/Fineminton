@@ -28,6 +28,9 @@
 		38C341BE28BC99710006F78E /* ChooseShotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C341BD28BC99710006F78E /* ChooseShotView.swift */; };
 		38C341D028BF42F50006F78E /* DummyTutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C341CF28BF42F50006F78E /* DummyTutorialView.swift */; };
 		2B63FA6D28B8CC7D008E9BAB /* ShotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63FA6C28B8CC7D008E9BAB /* ShotView.swift */; };
+		38C341CA28BE1C330006F78E /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C341C928BE1C330006F78E /* TimerViewModel.swift */; };
+		38C341CC28BE1C8C0006F78E /* ProgressRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C341CB28BE1C8C0006F78E /* ProgressRingView.swift */; };
+		38C341CE28BE1CD80006F78E /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C341CD28BE1CD80006F78E /* TimerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +100,9 @@
 		38C341BD28BC99710006F78E /* ChooseShotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseShotView.swift; sourceTree = "<group>"; };
 		38C341CF28BF42F50006F78E /* DummyTutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyTutorialView.swift; sourceTree = "<group>"; };
 		2B63FA6C28B8CC7D008E9BAB /* ShotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotView.swift; sourceTree = "<group>"; };
+		38C341C928BE1C330006F78E /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
+		38C341CB28BE1C8C0006F78E /* ProgressRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRingView.swift; sourceTree = "<group>"; };
+		38C341CD28BE1CD80006F78E /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				38C341B728B8CDB70006F78E /* ShotViewModel.swift */,
+				38C341C928BE1C330006F78E /* TimerViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -174,6 +181,8 @@
 				38C341BB28BC98F60006F78E /* ShotItemView.swift */,
 				38C341BD28BC99710006F78E /* ChooseShotView.swift */,
 				38C341CF28BF42F50006F78E /* DummyTutorialView.swift */,
+				38C341CB28BE1C8C0006F78E /* ProgressRingView.swift */,
+				38C341CD28BE1CD80006F78E /* TimerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -368,6 +377,10 @@
 				2B63FA2228B3D09F008E9BAB /* ContentView.swift in Sources */,
 				38C341D028BF42F50006F78E /* DummyTutorialView.swift in Sources */,
 				38C341BE28BC99710006F78E /* ChooseShotView.swift in Sources */,
+				38C341CE28BE1CD80006F78E /* TimerView.swift in Sources */,
+				2B63FA2228B3D09F008E9BAB /* ContentView.swift in Sources */,
+				38C341CC28BE1C8C0006F78E /* ProgressRingView.swift in Sources */,
+				38C341CA28BE1C330006F78E /* TimerViewModel.swift in Sources */,
 				2B63FA2028B3D09F008E9BAB /* FinemintonApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
