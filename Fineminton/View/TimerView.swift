@@ -8,7 +8,7 @@ import SwiftUI
 
 struct TimerView: View {
     @EnvironmentObject var drillTimer: TimerViewModel
-    @State var isPractice: Bool = false
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         VStack(spacing: 50){
@@ -16,12 +16,10 @@ struct TimerView: View {
             drillButton.padding()
         }
         .onAppear(){
-            drillTimer.progressCounter = 0.0
-            print("counter: ", drillTimer.progressCounter)
+            drillTimer.progressCounter = 1
         }
         .onReceive(drillTimer.timer) { _ in
             drillTimer.trackTime()
-            print("time: ", drillTimer.remainingTime)
         }
     }
 }
@@ -41,8 +39,8 @@ extension TimerView{
             }
             else {
                 drillTimer.setDrillState(newDrillState: .notStarted)
+                presentationMode.wrappedValue.dismiss()
             }
-            print(drillTimer.drillState)
         }
         label:{
             Text(drillTimer.drillState == .notStarted ? "Mulai Latihan" : "Selesai Latihan")
