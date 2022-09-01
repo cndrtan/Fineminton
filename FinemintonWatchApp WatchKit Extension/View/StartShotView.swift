@@ -15,6 +15,8 @@ struct StartShotView: View {
     @State var isPractice = true
     @State var practiceSet = 1
     @State var isEndShotView = false
+    @State var isStart = false
+    @State var count: Int = 3
     
     @EnvironmentObject var title: TitleSettings
     
@@ -30,6 +32,32 @@ struct StartShotView: View {
     
     var body: some View {
         NavigationView{
+            if !isStart{
+                ZStack{
+                    Text("\(count)")
+                        .fontWeight(.semibold).font(.system(size: 60))
+                        .onReceive(timer, perform: { _ in
+                            if count <= 1 {
+                                count = 0
+                            }else{
+                                count -= 1
+                            }
+                        })
+                    
+                    ProgressBarView(progress: self.$progressValue, color: $practiceColor).padding()
+                        .onReceive(timer){ _ in
+                            if count >= 1 {
+                                self.progressValue -= 1/3
+                            }else{
+                                self.progressValue = 1.0
+                                isStart.toggle()
+                            }
+                        }
+//                        .sheet(isPresented: $isShowStartShotView) {
+//                            StartShotView()
+//                        }
+                }
+            }else{
             ZStack{
                 VStack{
                     
@@ -89,6 +117,7 @@ struct StartShotView: View {
                 
             }.navigationBarTitleDisplayMode(.inline)
                 .navigationTitle("\(self.title.titleName)")
+            }
         }
     }
 }
