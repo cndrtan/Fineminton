@@ -61,8 +61,15 @@ struct StartShotView: View {
                             }else{
                                 self.progressValue = 1.0
                                 timeRemaining = 30
-                                isPractice.toggle()
+                                
+                                if practiceSet >= 5{
+                                    isEndShotView.toggle()
+                                }else{
+                                    isPractice.toggle()
+                                }
                             }
+                        }.sheet(isPresented: $isEndShotView) {
+                            EndShotView()
                         }
                 }else{
                     ProgressBarView(progress: self.$progressValue, color: $restColor).padding()
@@ -74,16 +81,9 @@ struct StartShotView: View {
                                 timeRemaining = 60
                                 practiceSet += 1
                                 
-                                if practiceSet == 6{
-                                    isEndShotView.toggle()
-                                }else{
-                                    isPractice.toggle()
-                                }
+                                isPractice.toggle()
                                 
                             }
-                        }
-                        .sheet(isPresented: $isEndShotView) {
-                            EndShotView()
                         }
                 }
                 
@@ -95,6 +95,6 @@ struct StartShotView: View {
 
 struct StartShotView_Previews: PreviewProvider {
     static var previews: some View {
-        StartShotView()
+        StartShotView().environmentObject(TitleSettings())
     }
 }

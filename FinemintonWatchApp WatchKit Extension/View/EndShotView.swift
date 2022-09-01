@@ -36,6 +36,6 @@ struct EndShotView: View {
 
 struct EndShotView_Previews: PreviewProvider {
     static var previews: some View {
-        EndShotView()
+        EndShotView().environmentObject(TitleSettings())
     }
 }
