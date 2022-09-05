@@ -44,7 +44,7 @@ struct StartShotView: View {
                             }
                         })
                     
-                    ProgressBarView(progress: self.$progressValue, color: $practiceColor).padding()
+                    ProgressBarView(progress: self.$progressValue, color: $practiceColor).padding().padding(.top, 5)
                         .onReceive(timer){ _ in
                             if count >= 1 {
                                 self.progressValue -= 1/3
@@ -77,7 +77,7 @@ struct StartShotView: View {
                     }
                     
                     if isPractice {
-                        ProgressBarView(progress: self.$progressValue, color: $practiceColor).padding()
+                        ProgressBarView(progress: self.$progressValue, color: $practiceColor).padding().padding(.top, 5)
                             .onReceive(timer) { _ in
                                 if timeRemaining >= 1 {
                                     self.progressValue -= 1/60
@@ -86,7 +86,7 @@ struct StartShotView: View {
                                     timeRemaining = 30
                                     
                                     if practiceSet >= 5{
-                                        isEndShotView.toggle()
+                                        isEndShotView = true
                                     }else{
                                         isPractice.toggle()
                                     }
@@ -95,7 +95,7 @@ struct StartShotView: View {
                                 EndShotView()
                             }
                     }else{
-                        ProgressBarView(progress: self.$progressValue, color: $restColor).padding()
+                        ProgressBarView(progress: self.$progressValue, color: $restColor).padding().padding(.top, 5)
                             .onReceive(timer) { _ in
                                 if timeRemaining >= 1 {
                                     self.progressValue -= 1/30
