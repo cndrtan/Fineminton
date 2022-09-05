@@ -27,7 +27,7 @@ struct TutorialView: View {
             .toolbar{
                 ToolbarItem(placement: .principal){
                     HStack{
-                        Text("Tutorial View")
+                        Text("Tutorial")
                             .font(.largeTitle)
                             .bold()
                             .padding(.vertical)
