@@ -11,17 +11,22 @@ struct TimerView: View {
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
-        VStack(spacing: 50){
-            ProgressRingView()
-            drillButton.padding()
-        }
-        .onAppear(){
-            drillTimer.progressCounter = 1
-        }
-        .onReceive(drillTimer.timer) { _ in
-            drillTimer.trackTime()
-        }
-    }
+           VStack(spacing: 50){
+               if drillTimer.drillState == .readying{
+                   ReadyRingView()
+               }
+               else {
+                   ProgressRingView()
+               }
+               drillButton.padding()
+           }
+           .onAppear(){
+               drillTimer.progressCounter = 1
+           }
+           .onReceive(drillTimer.timer) { _ in
+               drillTimer.trackTime()
+           }
+       }
 }
 
 struct DrillTimerView_Previews: PreviewProvider {
