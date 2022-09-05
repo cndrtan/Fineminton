@@ -30,7 +30,7 @@ struct VideoPlayerView: View {
                 }
                 HStack() {
                     Text(self.data.description)
-                        .multilineTextAlignment(.leading).font(.caption)
+                        .multilineTextAlignment(.leading)//.font(.caption)
                     Spacer()
                 }.padding(4)
                 if self.data.showActionButton {
