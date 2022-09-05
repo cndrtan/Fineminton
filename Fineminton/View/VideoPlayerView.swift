@@ -11,13 +11,14 @@ import AVKit
 struct VideoPlayerView: View {
     
     @State public var data: TutorialStep = TutorialStep()
+    @State public var stepsCount: Int = 0
     @State private var isDrilling: Bool = false
     
     var body: some View {
         GeometryReader { geometry in
             VStack {
                 HStack() {
-                    Text(self.data.title)
+                    Text(self.data.titleWithSequence(stepsCount: self.stepsCount))
                     Spacer()
                 }//.padding(.bottom)
                 //                VideoPlayer(player: AVPlayer(url: URL(string: self.data.mediaSource)!))

@@ -17,7 +17,7 @@ struct TutorialView: View {
 //                VideoPlayerView(data: self.viewModel.tutorialSteps[2]).padding(.horizontal)
 //                VideoPlayerView(data: self.viewModel.tutorialSteps[3]).padding(.horizontal)
                 ForEach(self.viewModel.tutorialSteps) { step in
-                    VideoPlayerView(data: step).padding(.horizontal)
+                    VideoPlayerView(data: step, stepsCount: self.viewModel.tutorialSteps.count).padding(.horizontal)
                 }
             }
             .tabViewStyle(.page)

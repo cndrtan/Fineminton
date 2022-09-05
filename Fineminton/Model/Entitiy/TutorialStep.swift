@@ -19,4 +19,11 @@ public struct TutorialStep: Identifiable {
 //    public func mediaSourceURL() -> URL {
 //        return Bundle.main.url(forResource: self.mediaSource, withExtension: "mp4")
 //    }
+    
+    public func titleWithSequence(stepsCount: Int) -> String {
+        let total = stepsCount //allSteps.count
+        let totalStr = String(total)
+        let titleOutOf = self.title + " dari " + totalStr
+        return titleOutOf
+    }
 }
