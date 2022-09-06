@@ -87,6 +87,7 @@ struct StartShotView: View {
                                     
                                     if practiceSet >= 5{
                                         isEndShotView = true
+                                        self.timer.upstream.connect().cancel()
                                     }else{
                                         isPractice.toggle()
                                     }
