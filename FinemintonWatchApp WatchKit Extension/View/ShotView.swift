@@ -28,11 +28,7 @@ struct ShotView: View {
             } label: {
                 Text("Smash").padding(.top, 50).padding(.bottom, 10)
             }.sheet(isPresented: $isShowTimerView) {
-<<<<<<< Updated upstream
                 TimerView()
-=======
-                UnavailableView()
->>>>>>> Stashed changes
             }
 
             Button {
@@ -41,11 +37,7 @@ struct ShotView: View {
             } label: {
                 Text("Drop Shot").padding(.top, 50).padding(.bottom, 10)
             }.sheet(isPresented: $isShowTimerView) {
-<<<<<<< Updated upstream
                 TimerView()
-=======
-                UnavailableView()
->>>>>>> Stashed changes
             }
             
             Button {
@@ -54,11 +46,7 @@ struct ShotView: View {
             } label: {
                 Text("Serve").padding(.top, 50).padding(.bottom, 10)
             }.sheet(isPresented: $isShowTimerView) {
-<<<<<<< Updated upstream
                 TimerView()
-=======
-                UnavailableView()
->>>>>>> Stashed changes
             }
         }.navigationBarTitleDisplayMode(.inline)
             .navigationTitle(Text("Choose Shot"))
