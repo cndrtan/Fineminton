@@ -27,6 +27,7 @@
 		2B63FA6F28B8CD78008E9BAB /* ShotData.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B63FA6E28B8CD78008E9BAB /* ShotData.json */; };
 		2B63FA7328B8FF41008E9BAB /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63FA7228B8FF41008E9BAB /* TimerView.swift */; };
 		2B63FA7528B8FF62008E9BAB /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63FA7428B8FF62008E9BAB /* ProgressBarView.swift */; };
+		2BC4903F28C73FCB0009F27F /* UnavailableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4903E28C73FCB0009F27F /* UnavailableView.swift */; };
 		38C341B428B8CD490006F78E /* Shot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C341B328B8CD490006F78E /* Shot.swift */; };
 		38C341B628B8CD880006F78E /* ShotData.json in Resources */ = {isa = PBXBuildFile; fileRef = 38C341B528B8CD880006F78E /* ShotData.json */; };
 		38C341B828B8CDB70006F78E /* ShotViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C341B728B8CDB70006F78E /* ShotViewModel.swift */; };
@@ -113,6 +114,7 @@
 		2B63FA6E28B8CD78008E9BAB /* ShotData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ShotData.json; sourceTree = "<group>"; };
 		2B63FA7228B8FF41008E9BAB /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		2B63FA7428B8FF62008E9BAB /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
+		2BC4903E28C73FCB0009F27F /* UnavailableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnavailableView.swift; sourceTree = "<group>"; };
 		38C341B328B8CD490006F78E /* Shot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shot.swift; sourceTree = "<group>"; };
 		38C341B528B8CD880006F78E /* ShotData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ShotData.json; sourceTree = "<group>"; };
 		38C341B728B8CDB70006F78E /* ShotViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotViewModel.swift; sourceTree = "<group>"; };
@@ -277,7 +279,11 @@
 			isa = PBXGroup;
 			children = (
 				2B63FA6C28B8CC7D008E9BAB /* ShotView.swift */,
+<<<<<<< Updated upstream
 				2B63FA7228B8FF41008E9BAB /* TimerView.swift */,
+=======
+				2BC4903E28C73FCB0009F27F /* UnavailableView.swift */,
+>>>>>>> Stashed changes
 				2B470F9428BE09EA00A5A661 /* StartShotView.swift */,
 				2B470F9628BE1FA200A5A661 /* EndShotView.swift */,
 				2B63FA7428B8FF62008E9BAB /* ProgressBarView.swift */,
@@ -472,6 +478,7 @@
 				2B470F9528BE09EA00A5A661 /* StartShotView.swift in Sources */,
 				2B63FA4828B3D13F008E9BAB /* ComplicationController.swift in Sources */,
 				2B63FA4028B3D13F008E9BAB /* FinemintonApp.swift in Sources */,
+				2BC4903F28C73FCB0009F27F /* UnavailableView.swift in Sources */,
 				2B63FA4628B3D13F008E9BAB /* NotificationView.swift in Sources */,
 				2B63FA7528B8FF62008E9BAB /* ProgressBarView.swift in Sources */,
 			);

@@ -30,7 +30,11 @@ struct ShotView: View {
                 Image("watch-8").resizable().frame(height: 60).padding(.top, 5)
                 Text("Smash").padding(.bottom, 10)
             }.sheet(isPresented: $isShowTimerView) {
+<<<<<<< Updated upstream
                 TimerView()
+=======
+                UnavailableView()
+>>>>>>> Stashed changes
             }
 
             Button {
@@ -40,7 +44,11 @@ struct ShotView: View {
                 Image("watch-6").resizable().frame(height: 60).padding(.top, 5)
                 Text("Drop Shot").padding(.bottom, 10)
             }.sheet(isPresented: $isShowTimerView) {
+<<<<<<< Updated upstream
                 TimerView()
+=======
+                UnavailableView()
+>>>>>>> Stashed changes
             }
             
             Button {
@@ -50,7 +58,11 @@ struct ShotView: View {
                 Image("watch-7").resizable().frame(height: 60).padding(.top, 5)
                 Text("Drive").padding(.bottom, 10)
             }.sheet(isPresented: $isShowTimerView) {
+<<<<<<< Updated upstream
                 TimerView()
+=======
+                UnavailableView()
+>>>>>>> Stashed changes
             }
         }.navigationBarTitleDisplayMode(.inline)
             .navigationTitle(Text("Choose Shot"))
