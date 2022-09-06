@@ -27,7 +27,7 @@ struct VideoPlayerView: View {
                         .frame(height: (geometry.size.height * 0.65)).cornerRadius(10)
                 }
                 else {
-                    Image(self.data.mediaSource).resizable().scaledToFit().frame(/*width: (geometry.size.width * 1),*/ height: (geometry.size.height * 0.65)).cornerRadius(10)
+                    Image(self.data.mediaSource).resizable().frame(/*width: (geometry.size.width * 1),*/ height: (geometry.size.height * 0.65)).cornerRadius(10).scaledToFit()
                 }
                 HStack() {
                     Text(self.data.description)
