@@ -17,8 +17,7 @@ struct ShotView: View {
                 isShowTimerView.toggle()
                 self.title.titleName = "Clear/Lob"
             } label: {
-                Image("watch-5").resizable().frame(height: 60).padding(.top, 5)
-                Text("Clear/Lob").padding(.bottom, 10)
+                Text("Clear/Lob").padding(.top, 50).padding(.bottom, 10)
             }.sheet(isPresented: $isShowTimerView) {
                 TimerView()
             }
@@ -27,8 +26,7 @@ struct ShotView: View {
                 isShowTimerView.toggle()
                 self.title.titleName = "Smash"
             } label: {
-                Image("watch-8").resizable().frame(height: 60).padding(.top, 5)
-                Text("Smash").padding(.bottom, 10)
+                Text("Smash").padding(.top, 50).padding(.bottom, 10)
             }.sheet(isPresented: $isShowTimerView) {
 <<<<<<< Updated upstream
                 TimerView()
@@ -41,8 +39,7 @@ struct ShotView: View {
                 isShowTimerView.toggle()
                 self.title.titleName = "Drop Shot"
             } label: {
-                Image("watch-6").resizable().frame(height: 60).padding(.top, 5)
-                Text("Drop Shot").padding(.bottom, 10)
+                Text("Drop Shot").padding(.top, 50).padding(.bottom, 10)
             }.sheet(isPresented: $isShowTimerView) {
 <<<<<<< Updated upstream
                 TimerView()
@@ -53,10 +50,9 @@ struct ShotView: View {
             
             Button {
                 isShowTimerView.toggle()
-                self.title.titleName = "Drive"
+                self.title.titleName = "Serve"
             } label: {
-                Image("watch-7").resizable().frame(height: 60).padding(.top, 5)
-                Text("Drive").padding(.bottom, 10)
+                Text("Serve").padding(.top, 50).padding(.bottom, 10)
             }.sheet(isPresented: $isShowTimerView) {
 <<<<<<< Updated upstream
                 TimerView()
