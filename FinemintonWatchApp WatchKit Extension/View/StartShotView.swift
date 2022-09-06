@@ -20,6 +20,8 @@ struct StartShotView: View {
     
     @EnvironmentObject var title: TitleSettings
     
+    @Environment(\.presentationMode) var presentationMode
+    
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     let futureDate: Date = Calendar.current.date(byAdding: .hour, value: 1, to: Date()) ?? Date()
     
@@ -33,6 +35,7 @@ struct StartShotView: View {
     var body: some View {
         NavigationView{
             if !isStart{
+                //three countdown timer
                 ZStack{
                     Text("\(count)")
                         .fontWeight(.semibold).font(.system(size: 60))
@@ -55,6 +58,7 @@ struct StartShotView: View {
                         }
                 }
             }else{
+                //start practicing and rest countdown timer
                 ZStack{
                     VStack{
                         Text("Set \(practiceSet) of 5").font(.system(size: 12))
@@ -76,6 +80,7 @@ struct StartShotView: View {
                         }
                     }
                     
+                    //progress in practice session
                     if isPractice {
                         ProgressBarView(progress: self.$progressValue, color: $practiceColor).padding().padding(.top, 5)
                             .onReceive(timer) { _ in
@@ -95,6 +100,7 @@ struct StartShotView: View {
                             }.sheet(isPresented: $isEndShotView) {
                                 EndShotView()
                             }
+                    //progress in rest session
                     }else{
                         ProgressBarView(progress: self.$progressValue, color: $restColor).padding().padding(.top, 5)
                             .onReceive(timer) { _ in
@@ -113,6 +119,10 @@ struct StartShotView: View {
                     
                 }.navigationBarTitleDisplayMode(.inline)
                     .navigationTitle("\(self.title.titleName)")
+            }
+        }.onAppear{
+            if title.isClose {
+                self.presentationMode.wrappedValue.dismiss()
             }
         }
     }

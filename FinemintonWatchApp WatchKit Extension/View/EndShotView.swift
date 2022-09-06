@@ -12,6 +12,8 @@ struct EndShotView: View {
     
     @EnvironmentObject var title: TitleSettings
     
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         NavigationView{
             VStack{
@@ -22,11 +24,10 @@ struct EndShotView: View {
                 Spacer()
                 
                 Button {
-                    isShotView.toggle()
+                    self.presentationMode.wrappedValue.dismiss()
+                    title.isClose = true
                 } label: {
                     Text("Close")
-                }.sheet(isPresented: $isShotView) {
-                    ShotView()
                 }
             }.navigationBarTitleDisplayMode(.inline)
                 .navigationTitle("\(self.title.titleName)")
