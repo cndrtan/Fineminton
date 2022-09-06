@@ -14,14 +14,14 @@ struct ReadyRingView: View {
             //default circle
             Circle()
                 .inset(by: 10)
-                .stroke(Color.gray, lineWidth: 25)
+                .stroke(Color.gray, lineWidth: 30)
                 .opacity(0.2)
                 
             //progres circle
             Circle()
                 .inset(by: 10)
                 .trim(from: 0.0, to: min(drillTimer.progressCounter, 1.0))
-                .stroke(drillTimer.ringColor, style: StrokeStyle(lineWidth: 17.0, lineCap: .round, lineJoin: .round))
+                .stroke(drillTimer.ringColor, style: StrokeStyle(lineWidth: 20, lineCap: .round, lineJoin: .round))
                 .rotationEffect((Angle(degrees: 270.0)))
                 .animation(.easeInOut(duration: 0.2), value: drillTimer.progressCounter)
             

@@ -15,7 +15,7 @@ struct ProgressRingView: View {
             //default circle
             Circle()
                 .inset(by: 10)
-                .stroke(Color.gray, lineWidth: 27)
+                .stroke(Color.gray, lineWidth: 30)
                 .opacity(0.2)
                 
             //progres circle
