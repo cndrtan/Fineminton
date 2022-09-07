@@ -18,8 +18,8 @@ struct UnavailableView: View {
             Button {
                 self.presentationMode.wrappedValue.dismiss()
             } label: {
-                Text("Close").background(Color("orangeColor")).cornerRadius(30)
-            }
+                Text("Close")
+            }.background(Color("orangeColor")).cornerRadius(30)
             
         }
     }
