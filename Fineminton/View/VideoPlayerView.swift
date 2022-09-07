@@ -14,6 +14,8 @@ struct VideoPlayerView: View {
     @State public var stepsCount: Int = 0
     @State private var isDrilling: Bool = false
     
+    @Environment(\.colorScheme) private var colorScheme: ColorScheme
+    
     var body: some View {
         GeometryReader { geometry in
             VStack {
@@ -45,10 +47,10 @@ struct VideoPlayerView: View {
                             .foregroundColor(.white)
                             .overlay(
                                 RoundedRectangle(cornerRadius: 10)
-                                    .stroke(Color.white, lineWidth: 2)
+                                    .stroke(Color.white, lineWidth: 0)
                             )
                     }
-                    .background(Color.blue)
+                    .background(ThemeColor(self.colorScheme).buttonColor)
                     .cornerRadius(10)
                     .fullScreenCover(isPresented: $isDrilling){
                         TimerView()

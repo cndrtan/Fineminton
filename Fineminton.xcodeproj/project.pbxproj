@@ -46,6 +46,7 @@
 		5C6354C628C739CC000EA042 /* l0t5.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 5C6354C228C739CA000EA042 /* l0t5.mp4 */; };
 		5C6354C728C739CC000EA042 /* l0t4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 5C6354C328C739CB000EA042 /* l0t4.mp4 */; };
 		5C6354C828C739CC000EA042 /* l0t2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 5C6354C428C739CC000EA042 /* l0t2.mp4 */; };
+		5C6354CB28C89C90000EA042 /* ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6354CA28C89C8F000EA042 /* ThemeColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +133,7 @@
 		5C6354C228C739CA000EA042 /* l0t5.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = l0t5.mp4; sourceTree = "<group>"; };
 		5C6354C328C739CB000EA042 /* l0t4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = l0t4.mp4; sourceTree = "<group>"; };
 		5C6354C428C739CC000EA042 /* l0t2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = l0t2.mp4; sourceTree = "<group>"; };
+		5C6354CA28C89C8F000EA042 /* ThemeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 		2B63FA1E28B3D09F008E9BAB /* Fineminton */ = {
 			isa = PBXGroup;
 			children = (
+				5C6354C928C89C70000EA042 /* Lib */,
 				5C48550128BF7523008FE1FB /* Video */,
 				2B63FA2F28B3D0D1008E9BAB /* Model */,
 				2B63FA2E28B3D0D1008E9BAB /* View */,
@@ -302,6 +305,14 @@
 				5C6354C228C739CA000EA042 /* l0t5.mp4 */,
 			);
 			path = Video;
+			sourceTree = "<group>";
+		};
+		5C6354C928C89C70000EA042 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				5C6354CA28C89C8F000EA042 /* ThemeColor.swift */,
+			);
+			path = Lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -442,6 +453,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C6354CB28C89C90000EA042 /* ThemeColor.swift in Sources */,
 				38C341B828B8CDB70006F78E /* ShotViewModel.swift in Sources */,
 				5C48550028BF5DEF008FE1FB /* TutorialStep.swift in Sources */,
 				38C341BC28BC98F60006F78E /* ShotItemView.swift in Sources */,
