@@ -12,34 +12,35 @@ struct ShotItemView: View {
     
     var body: some View {
         ZStack{
-            Image(shot.shotImage)
-                .resizable()
-                .cornerRadius(8)
-                .frame(width: 348, height: 188)
-            
             RoundedRectangle(cornerRadius: 8)
-                .stroke(.black, lineWidth: 0.15)
                 .frame(width: 348, height: 188)
-                .foregroundColor(.clear)
-                .background(LinearGradient(gradient: Gradient(colors: [.clear, .white]), startPoint: .top, endPoint: .bottom))
+                .foregroundColor(lightGreyBackgound)
             
             VStack(spacing: 5){
-                Spacer()
+                //Spacer()
+                Image(shot.shotImage)
+                    .resizable()
+                    .padding(.top)
+                    .frame(width: 323, height: 160)
+                
                 HStack{
                     Text(shot.shotName)
                         .font(.title3)
                         .fontWeight(.bold)
-                        .foregroundColor(.black)
-                        .padding([.top, .leading, .trailing])
+                        .foregroundColor(.white)
+                        .padding([.leading, .trailing])
                     Spacer()
                 }
+                
                 HStack{
                     Text(shot.shotSummary)
                         .font(.subheadline)
-                        .foregroundColor(.black)
+                        .foregroundColor(.white)
                         .padding([.leading, .bottom])
                     Spacer()
                 }
+                .padding(.bottom)
+                Spacer()
             }.frame(width: 348, height: 188)
         }
     }

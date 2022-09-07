@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "smash shot.jpeg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Dropshot.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

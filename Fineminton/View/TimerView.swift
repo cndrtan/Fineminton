@@ -11,17 +11,28 @@ struct TimerView: View {
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
-        VStack(spacing: 50){
-            ProgressRingView()
-            drillButton.padding()
-        }
-        .onAppear(){
-            drillTimer.progressCounter = 1
-        }
-        .onReceive(drillTimer.timer) { _ in
-            drillTimer.trackTime()
-        }
-    }
+           ZStack{
+               Color(greyBackground).ignoresSafeArea()
+               
+               VStack(spacing: 50){
+                   if drillTimer.drillState == .readying{
+                       ReadyRingView()
+                   }
+                   else {
+                       ProgressRingView()
+                       drillButton.padding()
+                   }
+                   
+               }
+               
+           }
+           .onAppear(){
+               drillTimer.progressCounter = 1
+           }
+           .onReceive(drillTimer.timer) { _ in
+               drillTimer.trackTime()
+           }
+       }
 }
 
 struct DrillTimerView_Previews: PreviewProvider {
@@ -43,13 +54,13 @@ extension TimerView{
             }
         }
         label:{
-            Text(drillTimer.drillState == .notStarted ? "Mulai Latihan" : "Selesai Latihan")
-                .fontWeight(.bold)
+            Text(drillTimer.drillState == .notStarted ? "Mulai Latihan" : "Batalkan Latihan")
+                .font(.system(size: 17))
+                .fontWeight(.semibold)
                 .frame(width: 348, height: 47)
-                .background(.blue)
+                .background(orangeButton)
                 .foregroundColor(Color.white)
                 .cornerRadius(8)
         }
     }
 }
-

@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "lob shot.jpeg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Clear_Lob.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

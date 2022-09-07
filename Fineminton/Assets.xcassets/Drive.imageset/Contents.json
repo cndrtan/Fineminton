@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "drop shot.jpeg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Drive.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
