@@ -17,6 +17,7 @@ struct StartShotView: View {
     @State var isEndShotView = false
     @State var isStart = false
     @State var count: Int = 3
+    @State private var tabSelection = 2
     
     @EnvironmentObject var title: TitleSettings
     
@@ -58,65 +59,76 @@ struct StartShotView: View {
                         }
                 }
             }else{
-                //start practicing and rest countdown timer
-                ZStack{
-                    VStack{
-                        Text("Set \(practiceSet) of 5").font(.system(size: 12))
-                        Text("\(convertSecondsToTime(timeInSeconds:timeRemaining))").fontWeight(.bold).font(.system(size: 21))
-                            .padding(.top, 15)
-                            .padding(.bottom, 15)
-                            .onReceive(timer) { time in
-                                if timeRemaining < 1 {
-                                    timeRemaining = 0
-                                }else{
-                                    timeRemaining -= 1
-                                }
-                            }
-                        
-                        if isPractice{
-                            Text("Practice").font(.system(size: 11))
-                        }else{
-                            Text("Rest").font(.system(size: 11))
-                        }
-                    }
+                TabView(selection: $tabSelection){
+                    ZStack{
+                        Button {
+                            self.timer.upstream.connect().cancel()
+                            self.presentationMode.wrappedValue.dismiss()
+                        } label: {
+                            Text("End")
+                        }.background(Color("orangeColor")).cornerRadius(30)
+                    }.tag(1)
                     
-                    //progress in practice session
-                    if isPractice {
-                        ProgressBarView(progress: self.$progressValue, color: $practiceColor).padding().padding(.top, 5)
-                            .onReceive(timer) { _ in
-                                if timeRemaining >= 1 {
-                                    self.progressValue -= 1/60
-                                }else{
-                                    self.progressValue = 1.0
-                                    timeRemaining = 30
-                                    
-                                    if practiceSet >= 5{
-                                        isEndShotView = true
-                                        self.timer.upstream.connect().cancel()
+                    //start practicing and rest countdown timer
+                    ZStack{
+                        VStack{
+                            Text("Set \(practiceSet) of 5").font(.system(size: 12))
+                            Text("\(convertSecondsToTime(timeInSeconds:timeRemaining))").fontWeight(.bold).font(.system(size: 21))
+                                .padding(.top, 15)
+                                .padding(.bottom, 15)
+                                .onReceive(timer) { time in
+                                    if timeRemaining < 1 {
+                                        timeRemaining = 0
                                     }else{
-                                        isPractice.toggle()
+                                        timeRemaining -= 1
                                     }
                                 }
-                            }.sheet(isPresented: $isEndShotView) {
-                                EndShotView()
+                            
+                            if isPractice{
+                                Text("Practice").font(.system(size: 11))
+                            }else{
+                                Text("Rest").font(.system(size: 11))
                             }
-                    //progress in rest session
-                    }else{
-                        ProgressBarView(progress: self.$progressValue, color: $restColor).padding().padding(.top, 5)
-                            .onReceive(timer) { _ in
-                                if timeRemaining >= 1 {
-                                    self.progressValue -= 1/30
-                                }else{
-                                    self.progressValue = 1.0
-                                    timeRemaining = 60
-                                    practiceSet += 1
-                                    
-                                    isPractice.toggle()
-                                    
+                        }
+                        
+                        //progress in practice session
+                        if isPractice {
+                            ProgressBarView(progress: self.$progressValue, color: $practiceColor).padding(.top, 5)
+                                .onReceive(timer) { _ in
+                                    if timeRemaining >= 1 {
+                                        self.progressValue -= 1/60
+                                    }else{
+                                        self.progressValue = 1.0
+                                        timeRemaining = 30
+                                        
+                                        if practiceSet >= 5{
+                                            isEndShotView = true
+                                            self.timer.upstream.connect().cancel()
+                                        }else{
+                                            isPractice.toggle()
+                                        }
+                                    }
+                                }.sheet(isPresented: $isEndShotView) {
+                                    EndShotView()
                                 }
-                            }
-                    }
-                    
+                        //progress in rest session
+                        }else{
+                            ProgressBarView(progress: self.$progressValue, color: $restColor).padding(.top, 5)
+                                .onReceive(timer) { _ in
+                                    if timeRemaining >= 1 {
+                                        self.progressValue -= 1/30
+                                    }else{
+                                        self.progressValue = 1.0
+                                        timeRemaining = 60
+                                        practiceSet += 1
+                                        
+                                        isPractice.toggle()
+                                        
+                                    }
+                                }
+                        }
+                        
+                    }.tag(2)
                 }.navigationBarTitleDisplayMode(.inline)
                     .navigationTitle("\(self.title.titleName)")
             }

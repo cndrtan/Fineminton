@@ -28,7 +28,7 @@ struct EndShotView: View {
                     title.isClose = true
                 } label: {
                     Text("Close")
-                }
+                }.background(Color("orangeColor")).cornerRadius(30)
             }.navigationBarTitleDisplayMode(.inline)
                 .navigationTitle("\(self.title.titleName)")
         }
