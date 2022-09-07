@@ -89,11 +89,11 @@ struct StartShotView: View {
                             }else{
                                 Text("Rest").font(.system(size: 11))
                             }
-                        }
+                        }.padding(.top, 15)
                         
                         //progress in practice session
                         if isPractice {
-                            ProgressBarView(progress: self.$progressValue, color: $practiceColor).padding(.top, 5)
+                            ProgressBarView(progress: self.$progressValue, color: $practiceColor).padding(.top, 15)
                                 .onReceive(timer) { _ in
                                     if timeRemaining >= 1 {
                                         self.progressValue -= 1/60
@@ -113,7 +113,7 @@ struct StartShotView: View {
                                 }
                         //progress in rest session
                         }else{
-                            ProgressBarView(progress: self.$progressValue, color: $restColor).padding(.top, 5)
+                            ProgressBarView(progress: self.$progressValue, color: $restColor).padding(.top, 15)
                                 .onReceive(timer) { _ in
                                     if timeRemaining >= 1 {
                                         self.progressValue -= 1/30
