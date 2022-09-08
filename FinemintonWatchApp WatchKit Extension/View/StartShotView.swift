@@ -46,6 +46,7 @@ struct StartShotView: View {
                             }else{
                                 count -= 1
                             }
+                            WKInterfaceDevice.current().play(.start)
                         })
                     
                     ProgressBarView(progress: self.$progressValue, color: $practiceColor).padding().padding(.top, 5)
@@ -121,6 +122,9 @@ struct StartShotView: View {
                                         self.progressValue = 1.0
                                         timeRemaining = 60
                                         practiceSet += 1
+                                        
+                                        //haptic success
+                                        WKInterfaceDevice.current().play(.success)
                                         
                                         isPractice.toggle()
                                         
