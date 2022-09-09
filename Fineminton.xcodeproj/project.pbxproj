@@ -50,6 +50,7 @@
 		5C6354C728C739CC000EA042 /* l0t4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 5C6354C328C739CB000EA042 /* l0t4.mp4 */; };
 		5C6354C828C739CC000EA042 /* l0t2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 5C6354C428C739CC000EA042 /* l0t2.mp4 */; };
 		5C6354CB28C89C90000EA042 /* ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6354CA28C89C8F000EA042 /* ThemeColor.swift */; };
+		5CC81E1128CB3E66009F2FE2 /* LoopingVideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC81E1028CB3E66009F2FE2 /* LoopingVideoPlayerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,6 +141,7 @@
 		5C6354C328C739CB000EA042 /* l0t4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = l0t4.mp4; sourceTree = "<group>"; };
 		5C6354C428C739CC000EA042 /* l0t2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = l0t2.mp4; sourceTree = "<group>"; };
 		5C6354CA28C89C8F000EA042 /* ThemeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColor.swift; sourceTree = "<group>"; };
+		5CC81E1028CB3E66009F2FE2 /* LoopingVideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopingVideoPlayerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -320,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				5C6354CA28C89C8F000EA042 /* ThemeColor.swift */,
+				5CC81E1028CB3E66009F2FE2 /* LoopingVideoPlayerView.swift */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -480,6 +483,7 @@
 				5C4854F928BF5D92008FE1FB /* TutorialView.swift in Sources */,
 				38C341CC28BE1C8C0006F78E /* ProgressRingView.swift in Sources */,
 				38C341CA28BE1C330006F78E /* TimerViewModel.swift in Sources */,
+				5CC81E1128CB3E66009F2FE2 /* LoopingVideoPlayerView.swift in Sources */,
 				2B63FA2028B3D09F008E9BAB /* FinemintonApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
