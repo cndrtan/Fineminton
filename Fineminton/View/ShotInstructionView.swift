@@ -143,7 +143,7 @@ class LoopingPlayerUIView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         // Load the resource -> h
-        let fileUrl = Bundle.main.url(forResource: "tahap_6_clear_shot_fast", withExtension: "mp4")!
+        let fileUrl = Bundle.main.url(forResource: "l0t5", withExtension: "mp4")!
         let asset = AVAsset(url: fileUrl)
         let item = AVPlayerItem(asset: asset)
         // Setup the player

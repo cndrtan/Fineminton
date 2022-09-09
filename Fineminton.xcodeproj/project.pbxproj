@@ -225,16 +225,16 @@
 		2B63FA2E28B3D0D1008E9BAB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5C4854F728BF5D92008FE1FB /* TutorialView.swift */,
-				5C4854F628BF5D92008FE1FB /* VideoPlayerView.swift */,
-				38C341B928BC98360006F78E /* ShotInstructionView.swift */,
-				38C341BB28BC98F60006F78E /* ShotItemView.swift */,
 				38C341BD28BC99710006F78E /* ChooseShotView.swift */,
 				38C341CF28BF42F50006F78E /* DummyTutorialView.swift */,
 				38C341CB28BE1C8C0006F78E /* ProgressRingView.swift */,
-				38C341CD28BE1CD80006F78E /* TimerView.swift */,
 				3865B5D528C8981A00E5C7C4 /* ReadyRingView.swift */,
 				3865B5D728C98DB300E5C7C4 /* ShotDescriptionView.swift */,
+				38C341B928BC98360006F78E /* ShotInstructionView.swift */,
+				38C341BB28BC98F60006F78E /* ShotItemView.swift */,
+				38C341CD28BE1CD80006F78E /* TimerView.swift */,
+				5C4854F728BF5D92008FE1FB /* TutorialView.swift */,
+				5C4854F628BF5D92008FE1FB /* VideoPlayerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -289,7 +289,6 @@
 			children = (
 				2B63FA6C28B8CC7D008E9BAB /* ShotView.swift */,
 				2BC4904028C744A20009F27F /* UnavailableView.swift */,
-				2B63FA7228B8FF41008E9BAB /* TimerView.swift */,
 				2B470F9428BE09EA00A5A661 /* StartShotView.swift */,
 				2B470F9628BE1FA200A5A661 /* EndShotView.swift */,
 				2B63FA7428B8FF62008E9BAB /* ProgressBarView.swift */,
@@ -491,7 +490,6 @@
 			files = (
 				2B470F9A28BF453300A5A661 /* TitleSettings.swift in Sources */,
 				2B470F9728BE1FA200A5A661 /* EndShotView.swift in Sources */,
-				2B63FA7328B8FF41008E9BAB /* TimerView.swift in Sources */,
 				2BC4904128C744A20009F27F /* UnavailableView.swift in Sources */,
 				2B63FA6D28B8CC7D008E9BAB /* ShotView.swift in Sources */,
 				2B63FA4428B3D13F008E9BAB /* NotificationController.swift in Sources */,
