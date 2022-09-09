@@ -10,33 +10,16 @@ import SwiftUI
 struct TutorialView: View {
     @StateObject private var viewModel: TutorialViewModel = TutorialViewModel()
     var body: some View {
-        NavigationView {
+        VStack {
             TabView {
-//                VideoPlayerView(data: self.viewModel.tutorialSteps[0]).padding(.horizontal)
-//                VideoPlayerView(data: self.viewModel.tutorialSteps[1]).padding(.horizontal)
-//                VideoPlayerView(data: self.viewModel.tutorialSteps[2]).padding(.horizontal)
-//                VideoPlayerView(data: self.viewModel.tutorialSteps[3]).padding(.horizontal)
                 ForEach(self.viewModel.tutorialSteps) { step in
                     VideoPlayerView(data: step, stepsCount: self.viewModel.tutorialSteps.count).padding(.horizontal)
                 }
             }
             .tabViewStyle(.page)
             .indexViewStyle(.page(backgroundDisplayMode: .always))
-            .padding(.top)
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar{
-                ToolbarItem(placement: .principal){
-                    HStack{
-                        Text("Tutorial")
-                            .font(.largeTitle)
-                            .bold()
-                            .padding(.vertical)
-                        Spacer()
-                    }
-                    
-                }
-            }
-        }
+        }.padding(.top)
+        .navigationTitle("Tutorial").navigationBarTitleDisplayMode(.inline)
     }
 }
 
