@@ -22,12 +22,13 @@ class TimerViewModel: ObservableObject{
     
     @Published var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     @Published var counter: Double = 0.0
-    
     @Published var remainingTime: String = "01:00"
     @Published var progressCounter: Double = 0.0
     @Published var remainedTime = 3.0
     
     @Published var ringColor: Color = blueRing ?? .blue
+    
+    @Published var showEndAlert: Bool = false
     
     var title: String{
         switch drillState{
@@ -107,7 +108,7 @@ class TimerViewModel: ObservableObject{
                 }
                 else{
                     setDrillState(newDrillState: .notStarted)
-                    self.drillSet = 1
+                    self.showEndAlert = true
                 }
             }
         }

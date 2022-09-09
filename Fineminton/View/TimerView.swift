@@ -9,6 +9,13 @@ import SwiftUI
 struct TimerView: View {
     @EnvironmentObject var drillTimer: TimerViewModel
     @Environment(\.presentationMode) var presentationMode
+    @State var alertTitle: String = ""
+    @State var alertMessage: String = ""
+    @State var showCancelAlert: Bool = false
+    
+    init() {
+            UIView.appearance(whenContainedInInstancesOf: [UIAlertController.self]).tintColor = .orange
+        }
     
     var body: some View {
            ZStack{
@@ -25,7 +32,6 @@ struct TimerView: View {
                    }
                    
                }
-               
            }
            .onAppear(){
                drillTimer.progressCounter = 1
@@ -33,6 +39,20 @@ struct TimerView: View {
            .onReceive(drillTimer.timer) { _ in
                drillTimer.trackTime()
            }
+           .alert(isPresented: $drillTimer.showEndAlert, content: {
+                   return Alert(title: Text("Selamat!"), message: Text("Sesi latihan Clear/Lob Shot telah selesai"))
+           })
+           .alert(isPresented:$showCancelAlert) {
+                       Alert(
+                           title: Text("Peringatan!"),
+                           message: Text("Apakah anda yakin ingin membatalkan latihan"),
+                           primaryButton: .cancel(),
+                           secondaryButton: .destructive(Text("Ya")) {
+                               drillTimer.setDrillState(newDrillState: .notStarted)
+                               presentationMode.wrappedValue.dismiss()
+                           }
+                       )
+            }
        }
 }
 
@@ -46,11 +66,12 @@ struct DrillTimerView_Previews: PreviewProvider {
 extension TimerView{
     private var drillButton: some View{
         Button{
-            drillTimer.setDrillState(newDrillState: .notStarted)
-            presentationMode.wrappedValue.dismiss()
+            self.showCancelAlert.toggle()
+            //drillTimer.setDrillState(newDrillState: .notStarted)
+            //presentationMode.wrappedValue.dismiss()
         }
         label:{
-            Text("Batalkan Latihan")
+            Text(drillTimer.drillSet == 5 ? "Selesai Latihan" : "Batalkan Latihan")
                 .font(.system(size: 17))
                 .fontWeight(.semibold)
                 .frame(width: 348, height: 47)
