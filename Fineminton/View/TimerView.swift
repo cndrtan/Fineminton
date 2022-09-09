@@ -13,10 +13,6 @@ struct TimerView: View {
     @State var alertMessage: String = ""
     @State var showCancelAlert: Bool = false
     
-    init() {
-            UIView.appearance(whenContainedInInstancesOf: [UIAlertController.self]).tintColor = .orange
-        }
-    
     var body: some View {
            ZStack{
                Color(greyBackground).ignoresSafeArea()
@@ -46,7 +42,7 @@ struct TimerView: View {
                        Alert(
                            title: Text("Peringatan!"),
                            message: Text("Apakah anda yakin ingin membatalkan latihan"),
-                           primaryButton: .cancel(),
+                           primaryButton: .cancel(Text("Tidak")),
                            secondaryButton: .destructive(Text("Ya")) {
                                drillTimer.setDrillState(newDrillState: .notStarted)
                                presentationMode.wrappedValue.dismiss()

@@ -30,7 +30,7 @@ struct ShotInstructionView: View {
                     .frame(width: 345, height: 477).cornerRadius(10)
                 
                 HStack{
-                    Text("SET & DURATION")
+                    Text("SET & DURASI")
                         .font(.system(size: 16))
                         .fontWeight(.semibold)
                         .foregroundColor(Color.white)
