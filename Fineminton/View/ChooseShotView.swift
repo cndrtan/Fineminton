@@ -10,11 +10,23 @@ import SwiftUI
 struct ChooseShotView: View {
 
     @EnvironmentObject var shotViewModel: ShotViewModel
+    @State var alertTitle: String = ""
+    @State var alertMessage: String = ""
+    @State var showAlert: Bool = false
     var shots: [Shot] = ShotViewModel().shots
     
+    init() {
+            UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+            UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
+            UINavigationBar.appearance().barTintColor = greyBackground
+            UIView.appearance(whenContainedInInstancesOf: [UIAlertController.self]).tintColor = .orange
+        }
+
     var body: some View {
         NavigationView{
-            ScrollView{
+            ZStack{
+                Color(greyBackground).ignoresSafeArea()
+                ScrollView(showsIndicators: false){
                 VStack(spacing: 30){
                     ForEach(shots){
                         shot in
@@ -25,34 +37,33 @@ struct ChooseShotView: View {
                             }
                         }
                         else{
-                            ShotItemView(shot: shot)
+                            Button{
+                                showAlert(title: "Oops maaf", message: "Latihan ini belum tersedia")
+                            }label: {
+                                ShotItemView(shot: shot)
+                            }
+                            .alert(isPresented: $showAlert, content: {
+                                    return Alert(title: Text(alertTitle), message: Text(alertMessage))
+                            })
                         }
                     }
-                    
                 }
-            }
-            .padding(.top)
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar{
-                ToolbarItem(placement: .principal){
-                    HStack{
-                        Text("Choose Shot")
-                            .font(.largeTitle)
-                            .bold()
-                            .padding(.vertical)
-                        Spacer()
-                    }
-                    
                 }
+                .navigationBarTitle("Practice Shot", displayMode: .large)
             }
-        }
-        .navigationViewStyle(.stack)
+            .navigationViewStyle(.stack)
+        }.accentColor(orangeButton)
     }
     
+    func showAlert(title: String, message: String){
+        self.alertTitle =  title
+        self.alertMessage = message
+        showAlert.toggle()
+    }
 }
 
 struct ChooseShotView_Previews: PreviewProvider {
     static var previews: some View {
-        ChooseShotView()
+        ChooseShotView().preferredColorScheme(.dark)
     }
 }

@@ -6,40 +6,46 @@
 //
 import Foundation
 import SwiftUI
+import AVFoundation
 
 enum DrillState{
     case notStarted
     case drilling
     case resting
+    case readying
 }
 
 class TimerViewModel: ObservableObject{
 
-    @Published var drillState: DrillState = .notStarted
+    @Published var drillState: DrillState = .readying
     @Published var drillSet: Int = 1
     
     @Published var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     @Published var counter: Double = 0.0
-    
     @Published var remainingTime: String = "01:00"
     @Published var progressCounter: Double = 0.0
-    @Published var remainedTime = 0.0
+    @Published var remainedTime = 3.0
     
-    @Published var ringColor: Color = .green
+    @Published var ringColor: Color = blueRing ?? .blue
+    
+    @Published var showEndAlert: Bool = false
     
     var title: String{
         switch drillState{
         case .notStarted:
-            return ""
+            return "Sesi Latihan"
         case .drilling:
             return "Sesi Latihan"
         case .resting:
             return "Sesi Istirahat"
+        case .readying:
+            return "Sesi Mulai"
         }
     }
     
     let drillDuration = 60
     let restDuration = 30
+    let readyDuration = 3
         
     func formatTime(time: CGFloat) -> String{
         let formatter = DateComponentsFormatter()
@@ -50,7 +56,7 @@ class TimerViewModel: ObservableObject{
     }
     
     func setDrillState(newDrillState: DrillState){
-        drillState = newDrillState
+        self.drillState = newDrillState
         switch drillState {
         case .notStarted:
             timer.upstream.connect().cancel()
@@ -61,11 +67,15 @@ class TimerViewModel: ObservableObject{
         case .drilling:
             remainedTime = Double(drillDuration)
             timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-            ringColor = .green
+            ringColor = greenRing ?? .green
         case .resting:
             remainedTime = Double(restDuration)
             timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-            ringColor = .blue
+            ringColor = blueRing ?? .blue
+        case .readying:
+            remainedTime = Double(readyDuration)
+            timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+            ringColor = blueRing ?? .blue
         }
     }
     
@@ -74,37 +84,47 @@ class TimerViewModel: ObservableObject{
     }
     
     func trackTime(){
+        if drillState == .readying{
+            if remainedTime > 1 {
+                self.remainedTime -= 1
+                self.progressCounter = remainedTime / Double(readyDuration)
+                self.remainingTime = formatTime(time: CGFloat(remainedTime))
+            } else{
+                setDrillState(newDrillState: .drilling)
+            }
+        }
+        
         if drillState == .drilling{
-            if remainedTime > 0 {
+            if remainedTime >= 1 {
                 self.progressCounter = remainedTime / Double(drillDuration)
                 self.remainingTime = formatTime(time: CGFloat(remainedTime))
-                print ("drill time", remainingTime)
                 self.remainedTime -= 1
             }
             else{
                 if drillSet < 5{
+                    AudioServicesPlaySystemSound(1005)
+                    print("drill state:", drillState, "with remained time = ", remainedTime)
                     setDrillState(newDrillState: .resting)
-                    self.drillSet += 1
                 }
                 else{
                     setDrillState(newDrillState: .notStarted)
-                    self.drillSet = 1
+                    self.showEndAlert = true
                 }
             }
         }
+        
         if drillState == .resting{
-            if remainedTime > 0 {
-                self.progressCounter = remainedTime / Double(drillDuration)
+            if remainedTime >= 1  {
+                self.progressCounter = remainedTime / Double(restDuration)
                 self.remainingTime = formatTime(time: CGFloat(remainedTime))
-                print ("drill time", remainingTime)
                 self.remainedTime -= 1
             }
             else{
                 setDrillState(newDrillState: .drilling)
+                self.drillSet += 1
             }
         }
             
     }
     
 }
-
