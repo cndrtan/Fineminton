@@ -6,9 +6,11 @@
 //
 import SwiftUI
 import AVKit
+import AVFoundation
 
 struct ShotInstructionView: View {
     @EnvironmentObject var shotViewModel: ShotViewModel
+    @EnvironmentObject var drillTimer: TimerViewModel
     @State private var isDrilling: Bool = false
     @State private var isViewDescription: Bool = false
     
@@ -24,24 +26,22 @@ struct ShotInstructionView: View {
             
             VStack(spacing: 10){
                 Spacer()
-                
-                VideoPlayer(player: AVPlayer(url: Bundle.main.url(forResource: "tahap_6_clear_shot_fast", withExtension: "mp4")!))
-                    .frame(width: 360, height: 477)
-                    .cornerRadius(10)
+                PlayerView()
+                    .frame(width: 345, height: 477).cornerRadius(10)
                 
                 HStack{
                     Text("SET & DURATION")
                         .font(.system(size: 16))
                         .fontWeight(.semibold)
                         .foregroundColor(Color.white)
-                        .padding(.leading)
+                        .padding(.leading, 25)
                     Spacer()
                 }
                 HStack{
                     Image("icon-racket")
                         .resizable()
                         .frame(width: 16, height: 16)
-                        .padding(.leading)
+                        .padding(.leading, 25)
                     Text("20 x 5 set")
                         .font(.system(size: 16))
                         .fontWeight(.semibold)
@@ -52,7 +52,7 @@ struct ShotInstructionView: View {
                 HStack{
                     Label("", systemImage: "stopwatch")
                         .labelStyle(.iconOnly)
-                        .padding(.leading)
+                        .padding(.leading, 25)
                         .foregroundColor(.white)
                     
                     Text("1 menit / set")
@@ -67,19 +67,20 @@ struct ShotInstructionView: View {
                     Text("Lihat Tutorial")
                         .font(.system(size: 14))
                         .fontWeight(.semibold)
-                        .frame(width: 360, height: 47)
+                        .frame(width: 345, height: 47)
                         .background(orangeButton)
                         .foregroundColor(.white)
                         .cornerRadius(8)
                         .padding(.top)
                 }
+                
                 Button{
                     isDrilling.toggle()
-                }label:{
+                } label:{
                     ZStack{
                         RoundedRectangle(cornerRadius: 8)
                             .stroke(Color(red: 0.937, green: 0.406, blue: 0.094), lineWidth: 2)
-                            .frame(width: 360, height: 47)
+                            .frame(width: 345, height: 47)
                             .foregroundColor(.black)
                     
                         Text("Mulai Latihan")
@@ -104,6 +105,12 @@ struct ShotInstructionView: View {
                     .labelStyle(.iconOnly)
                     .foregroundColor(orangeButton)
                 }
+                .halfSheet(showSheet: $isViewDescription) {
+                    ShotDescriptionView(isShown: self.$isViewDescription, title: .constant(shot.shotName), description: .constant(shot.shotDescription))
+                } onEnd: {
+                    
+                    print("Dismissed")
+                }
             }
         }
     }
@@ -118,18 +125,39 @@ struct ShotInstructionView_Previews: PreviewProvider {
     }
 }
 
-extension ShotInstructionView{
-    private var nextButton: some View{
-        Button{
-            
-        }
-    label:{
-        Text("Lanjut")
-            .fontWeight(.bold)
-            .frame(width: 348, height: 47)
-            .background(.blue)
-            .foregroundColor(Color.white)
-            .cornerRadius(8)
+struct PlayerView: UIViewRepresentable {
+    func updateUIView(_ uiView: UIView, context: UIViewRepresentableContext<PlayerView>) {
     }
+
+    func makeUIView(context: Context) -> UIView {
+        return LoopingPlayerUIView(frame: .zero)
+    }
+}
+
+class LoopingPlayerUIView: UIView {
+    private let playerLayer = AVPlayerLayer()
+    private var playerLooper: AVPlayerLooper?
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        // Load the resource -> h
+        let fileUrl = Bundle.main.url(forResource: "tahap_6_clear_shot_fast", withExtension: "mp4")!
+        let asset = AVAsset(url: fileUrl)
+        let item = AVPlayerItem(asset: asset)
+        // Setup the player
+        let player = AVQueuePlayer()
+        playerLayer.player = player
+        playerLayer.videoGravity = .resizeAspectFill
+        layer.addSublayer(playerLayer)
+        // Create a new player looper with the queue player and template item
+        playerLooper = AVPlayerLooper(player: player, templateItem: item)
+        // Start the movie
+        player.play()
+    }
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        playerLayer.frame = bounds
     }
 }

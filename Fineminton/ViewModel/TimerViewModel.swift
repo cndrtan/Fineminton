@@ -44,6 +44,7 @@ class TimerViewModel: ObservableObject{
     
     let drillDuration = 60
     let restDuration = 30
+    let readyDuration = 3
         
     func formatTime(time: CGFloat) -> String{
         let formatter = DateComponentsFormatter()
@@ -54,7 +55,7 @@ class TimerViewModel: ObservableObject{
     }
     
     func setDrillState(newDrillState: DrillState){
-        drillState = newDrillState
+        self.drillState = newDrillState
         switch drillState {
         case .notStarted:
             timer.upstream.connect().cancel()
@@ -71,7 +72,7 @@ class TimerViewModel: ObservableObject{
             timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
             ringColor = blueRing ?? .blue
         case .readying:
-            remainedTime = Double(3)
+            remainedTime = Double(readyDuration)
             timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
             ringColor = blueRing ?? .blue
         }
@@ -85,7 +86,7 @@ class TimerViewModel: ObservableObject{
         if drillState == .readying{
             if remainedTime > 1 {
                 self.remainedTime -= 1
-                self.progressCounter = remainedTime / Double(3)
+                self.progressCounter = remainedTime / Double(readyDuration)
                 self.remainingTime = formatTime(time: CGFloat(remainedTime))
             } else{
                 setDrillState(newDrillState: .drilling)
@@ -96,13 +97,12 @@ class TimerViewModel: ObservableObject{
             if remainedTime >= 1 {
                 self.progressCounter = remainedTime / Double(drillDuration)
                 self.remainingTime = formatTime(time: CGFloat(remainedTime))
-                print ("drill time", remainingTime)
                 self.remainedTime -= 1
             }
-                        
             else{
-                AudioServicesPlaySystemSound(1005)
                 if drillSet < 5{
+                    AudioServicesPlaySystemSound(1005)
+                    print("drill state:", drillState, "with remained time = ", remainedTime)
                     setDrillState(newDrillState: .resting)
                 }
                 else{
@@ -116,12 +116,11 @@ class TimerViewModel: ObservableObject{
             if remainedTime >= 1  {
                 self.progressCounter = remainedTime / Double(restDuration)
                 self.remainingTime = formatTime(time: CGFloat(remainedTime))
-                print ("drill time", remainingTime)
                 self.remainedTime -= 1
             }
             else{
-                self.drillSet += 1
                 setDrillState(newDrillState: .drilling)
+                self.drillSet += 1
             }
         }
             

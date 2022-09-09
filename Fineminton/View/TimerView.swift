@@ -15,8 +15,9 @@ struct TimerView: View {
                Color(greyBackground).ignoresSafeArea()
                
                VStack(spacing: 50){
-                   if drillTimer.drillState == .readying{
+                   if drillTimer.drillState == .readying {
                        ReadyRingView()
+                       emptyButton.padding()
                    }
                    else {
                        ProgressRingView()
@@ -45,16 +46,11 @@ struct DrillTimerView_Previews: PreviewProvider {
 extension TimerView{
     private var drillButton: some View{
         Button{
-            if drillTimer.drillState == .notStarted{
-                drillTimer.setDrillState(newDrillState: .drilling)
-            }
-            else {
-                drillTimer.setDrillState(newDrillState: .notStarted)
-                presentationMode.wrappedValue.dismiss()
-            }
+            drillTimer.setDrillState(newDrillState: .notStarted)
+            presentationMode.wrappedValue.dismiss()
         }
         label:{
-            Text(drillTimer.drillState == .notStarted ? "Mulai Latihan" : "Batalkan Latihan")
+            Text("Batalkan Latihan")
                 .font(.system(size: 17))
                 .fontWeight(.semibold)
                 .frame(width: 348, height: 47)
@@ -63,4 +59,15 @@ extension TimerView{
                 .cornerRadius(8)
         }
     }
+    
+    private var emptyButton: some View{
+        Text("")
+            .font(.system(size: 17))
+            .fontWeight(.semibold)
+            .frame(width: 348, height: 47)
+            .background(Color(greyBackground).ignoresSafeArea())
+            .foregroundColor(Color.white)
+            .cornerRadius(8)
+    }
+    
 }

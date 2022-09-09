@@ -13,11 +13,10 @@ struct ShotItemView: View {
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 8)
-                .frame(width: 348, height: 188)
+                .frame(width: 348, height: 210)
                 .foregroundColor(lightGreyBackgound)
             
             VStack(spacing: 5){
-                //Spacer()
                 Image(shot.shotImage)
                     .resizable()
                     .padding(.top)
@@ -40,7 +39,6 @@ struct ShotItemView: View {
                     Spacer()
                 }
                 .padding(.bottom)
-                Spacer()
             }.frame(width: 348, height: 188)
         }
     }

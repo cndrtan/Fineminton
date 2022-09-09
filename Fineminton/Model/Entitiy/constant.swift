@@ -67,3 +67,93 @@ func uicolorFromHex(rgbValue:UInt32)->UIColor{
 
     return UIColor(red:red, green:green, blue:blue, alpha:1.0)
 }
+
+
+
+// Below codes were taken from KavSoft on Half Modal Tutorial
+extension View{
+    
+    // Binding Show Variable...
+    func halfSheet<SheetView: View>(showSheet: Binding<Bool>,@ViewBuilder sheetView: @escaping ()->SheetView,onEnd: @escaping ()->())->some View{
+        return self
+            .background(
+                HalfSheetHelper(sheetView: sheetView(),showSheet: showSheet, onEnd: onEnd)
+            )
+            .onChange(of: showSheet.wrappedValue) { newValue in
+                if !newValue{
+                    onEnd()
+                }
+            }
+    }
+}
+
+struct HalfSheetHelper<SheetView: View>: UIViewControllerRepresentable{
+    
+    var sheetView: SheetView
+    @Binding var showSheet: Bool
+    var onEnd: ()->()
+    
+    let controller = UIViewController()
+    
+    func makeCoordinator() -> Coordinator {
+        
+        return Coordinator(parent: self)
+    }
+    
+    func makeUIViewController(context: Context) -> UIViewController {
+    
+        controller.view.backgroundColor = .clear
+        
+        return controller
+    }
+    
+    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
+     
+        if showSheet{
+            
+            if uiViewController.presentedViewController == nil{
+                let sheetController = CustomHostingController(rootView: sheetView)
+                sheetController.presentationController?.delegate = context.coordinator
+                uiViewController.present(sheetController, animated: true)
+            }
+        }
+        else{
+            // closing view when showSheet toggled again...
+            if uiViewController.presentedViewController != nil{
+                uiViewController.dismiss(animated: true)
+            }
+        }
+    }
+    
+    // On Dismiss...
+    class Coordinator: NSObject,UISheetPresentationControllerDelegate{
+        
+        var parent: HalfSheetHelper
+        
+        init(parent: HalfSheetHelper) {
+            self.parent = parent
+        }
+        
+        func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
+            parent.showSheet = false
+        }
+    }
+}
+
+// Custom UIHostingController for halfSheet....
+class CustomHostingController<Content: View>: UIHostingController<Content>{
+    
+    override func viewDidLoad() {
+                
+        // setting presentation controller properties...
+        if let presentationController = presentationController as? UISheetPresentationController{
+            
+            presentationController.detents = [
+               .medium(),
+               .large()
+            ]
+            // to show grab protion...
+            presentationController.prefersGrabberVisible = true
+        }
+    }
+}

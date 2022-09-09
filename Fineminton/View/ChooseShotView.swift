@@ -19,7 +19,6 @@ struct ChooseShotView: View {
             UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
             UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
             UINavigationBar.appearance().barTintColor = greyBackground
-        
             UIView.appearance(whenContainedInInstancesOf: [UIAlertController.self]).tintColor = .orange
         }
 
@@ -57,8 +56,8 @@ struct ChooseShotView: View {
     }
     
     func showAlert(title: String, message: String){
-        alertTitle =  title
-        alertMessage = message
+        self.alertTitle =  title
+        self.alertMessage = message
         showAlert.toggle()
     }
 }
