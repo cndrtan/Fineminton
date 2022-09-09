@@ -12,4 +12,5 @@ class TitleSettings: ObservableObject {
     
     
     @Published var titleName = ""
+    @Published var isClose = false
 }

@@ -25,7 +25,6 @@
 		2B63FA5228B3D13F008E9BAB /* FinemintonWatchApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2B63FA3228B3D13E008E9BAB /* FinemintonWatchApp.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2B63FA6D28B8CC7D008E9BAB /* ShotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63FA6C28B8CC7D008E9BAB /* ShotView.swift */; };
 		2B63FA6F28B8CD78008E9BAB /* ShotData.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B63FA6E28B8CD78008E9BAB /* ShotData.json */; };
-		2B63FA7328B8FF41008E9BAB /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63FA7228B8FF41008E9BAB /* TimerView.swift */; };
 		2B63FA7528B8FF62008E9BAB /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B63FA7428B8FF62008E9BAB /* ProgressBarView.swift */; };
 		38C341B428B8CD490006F78E /* Shot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C341B328B8CD490006F78E /* Shot.swift */; };
 		38C341B628B8CD880006F78E /* ShotData.json in Resources */ = {isa = PBXBuildFile; fileRef = 38C341B528B8CD880006F78E /* ShotData.json */; };
@@ -111,7 +110,6 @@
 		2B63FA4F28B3D13F008E9BAB /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		2B63FA6C28B8CC7D008E9BAB /* ShotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotView.swift; sourceTree = "<group>"; };
 		2B63FA6E28B8CD78008E9BAB /* ShotData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ShotData.json; sourceTree = "<group>"; };
-		2B63FA7228B8FF41008E9BAB /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		2B63FA7428B8FF62008E9BAB /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 		38C341B328B8CD490006F78E /* Shot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shot.swift; sourceTree = "<group>"; };
 		38C341B528B8CD880006F78E /* ShotData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ShotData.json; sourceTree = "<group>"; };
@@ -277,7 +275,6 @@
 			isa = PBXGroup;
 			children = (
 				2B63FA6C28B8CC7D008E9BAB /* ShotView.swift */,
-				2B63FA7228B8FF41008E9BAB /* TimerView.swift */,
 				2B470F9428BE09EA00A5A661 /* StartShotView.swift */,
 				2B470F9628BE1FA200A5A661 /* EndShotView.swift */,
 				2B63FA7428B8FF62008E9BAB /* ProgressBarView.swift */,
@@ -466,7 +463,6 @@
 			files = (
 				2B470F9A28BF453300A5A661 /* TitleSettings.swift in Sources */,
 				2B470F9728BE1FA200A5A661 /* EndShotView.swift in Sources */,
-				2B63FA7328B8FF41008E9BAB /* TimerView.swift in Sources */,
 				2B63FA6D28B8CC7D008E9BAB /* ShotView.swift in Sources */,
 				2B63FA4428B3D13F008E9BAB /* NotificationController.swift in Sources */,
 				2B470F9528BE09EA00A5A661 /* StartShotView.swift in Sources */,
