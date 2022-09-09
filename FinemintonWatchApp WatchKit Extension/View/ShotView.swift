@@ -9,44 +9,49 @@ import SwiftUI
 
 struct ShotView: View {
     @State private var isShowTimerView = false
+    @State private var isUnavailable = false
     @EnvironmentObject var title: TitleSettings
     
     var body: some View {
         List{
             Button {
-                isShowTimerView.toggle()
+                isShowTimerView = true
                 self.title.titleName = "Clear/Lob"
             } label: {
-                Text("Clear/Lob").padding(.top, 50).padding(.bottom, 10)
+                Image("watch-5").resizable().frame(height: 60).padding(.top, 5)
+                Text("Clear/Lob").padding(.bottom, 10)
             }.sheet(isPresented: $isShowTimerView) {
                 StartShotView()
             }
 
             Button {
-                isShowTimerView.toggle()
+                isUnavailable = true
                 self.title.titleName = "Smash"
             } label: {
-                Text("Smash").padding(.top, 50).padding(.bottom, 10)
-            }.sheet(isPresented: $isShowTimerView) {
-                StartShotView()
+                Image("watch-8").resizable().frame(height: 60).padding(.top, 5)
+                Text("Smash").padding(.bottom, 10)
+            }.sheet(isPresented: $isUnavailable) {
+                UnavailableView()
             }
 
             Button {
-                isShowTimerView.toggle()
+                isUnavailable = true
                 self.title.titleName = "Drop Shot"
             } label: {
-                Text("Drop Shot").padding(.top, 50).padding(.bottom, 10)
-            }.sheet(isPresented: $isShowTimerView) {
-                StartShotView()
+                Image("watch-6").resizable().frame(height: 60).padding(.top, 5)
+                Text("Drop").padding(.bottom, 10)
+            }.sheet(isPresented: $isUnavailable) {
+                UnavailableView()
             }
             
             Button {
-                isShowTimerView.toggle()
-                self.title.titleName = "Serve"
+                isUnavailable = true
+                self.title.titleName = "Drive"
             } label: {
-                Text("Serve").padding(.top, 50).padding(.bottom, 10)
-            }.sheet(isPresented: $isShowTimerView) {
-                StartShotView()
+                Image("watch-7").resizable().frame(height: 60).padding(.top, 5)
+                Text("Drive").padding(.bottom, 10)
+            }.sheet(isPresented: $isUnavailable) {
+                UnavailableView()
             }
         }.navigationBarTitleDisplayMode(.inline)
             .navigationTitle(Text("Choose Shot"))
