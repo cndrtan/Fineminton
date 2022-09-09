@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ShotView: View {
     @State private var isShowTimerView = false
+    @State private var isUnavailable = false
     @EnvironmentObject var title: TitleSettings
     
     var body: some View {
@@ -24,32 +25,32 @@ struct ShotView: View {
             }
 
             Button {
-                isShowTimerView = true
+                isUnavailable = true
                 self.title.titleName = "Smash"
             } label: {
                 Image("watch-8").resizable().frame(height: 60).padding(.top, 5)
                 Text("Smash").padding(.bottom, 10)
-            }.sheet(isPresented: $isShowTimerView) {
+            }.sheet(isPresented: $isUnavailable) {
                 UnavailableView()
             }
 
             Button {
-                isShowTimerView = true
+                isUnavailable = true
                 self.title.titleName = "Drop Shot"
             } label: {
                 Image("watch-6").resizable().frame(height: 60).padding(.top, 5)
                 Text("Drop").padding(.bottom, 10)
-            }.sheet(isPresented: $isShowTimerView) {
+            }.sheet(isPresented: $isUnavailable) {
                 UnavailableView()
             }
             
             Button {
-                isShowTimerView = true
+                isUnavailable = true
                 self.title.titleName = "Drive"
             } label: {
                 Image("watch-7").resizable().frame(height: 60).padding(.top, 5)
                 Text("Drive").padding(.bottom, 10)
-            }.sheet(isPresented: $isShowTimerView) {
+            }.sheet(isPresented: $isUnavailable) {
                 UnavailableView()
             }
         }.navigationBarTitleDisplayMode(.inline)
