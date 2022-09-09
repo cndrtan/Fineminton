@@ -14,7 +14,7 @@ struct ShotView: View {
     var body: some View {
         List{
             Button {
-                isShowTimerView.toggle()
+                isShowTimerView = true
                 self.title.titleName = "Clear/Lob"
             } label: {
                 Image("watch-5").resizable().frame(height: 60).padding(.top, 5)
@@ -24,7 +24,7 @@ struct ShotView: View {
             }
 
             Button {
-                isShowTimerView.toggle()
+                isShowTimerView = true
                 self.title.titleName = "Smash"
             } label: {
                 Image("watch-8").resizable().frame(height: 60).padding(.top, 5)
@@ -34,7 +34,7 @@ struct ShotView: View {
             }
 
             Button {
-                isShowTimerView.toggle()
+                isShowTimerView = true
                 self.title.titleName = "Drop Shot"
             } label: {
                 Image("watch-6").resizable().frame(height: 60).padding(.top, 5)
@@ -44,8 +44,8 @@ struct ShotView: View {
             }
             
             Button {
-                isShowTimerView.toggle()
-                self.title.titleName = "Serve"
+                isShowTimerView = true
+                self.title.titleName = "Drive"
             } label: {
                 Image("watch-7").resizable().frame(height: 60).padding(.top, 5)
                 Text("Drive").padding(.bottom, 10)
