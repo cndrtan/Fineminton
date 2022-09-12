@@ -67,7 +67,8 @@ struct StartShotView: View {
                             self.presentationMode.wrappedValue.dismiss()
                         } label: {
                             Text("End")
-                        }.background(Color("orangeColor")).cornerRadius(30)
+                        }.buttonStyle(.plain).frame(width: 172, height: 44)
+                        .background(Color("orangeColor")).cornerRadius(30)
                     }.tag(1)
                     
                     //start practicing and rest countdown timer
