@@ -12,6 +12,7 @@ struct TimerView: View {
     @State var alertTitle: String = ""
     @State var alertMessage: String = ""
     @State var showCancelAlert: Bool = false
+    @State var isReturn: Bool = false
     
     var body: some View {
            ZStack{
@@ -30,7 +31,8 @@ struct TimerView: View {
                                             dismissButton: Alert.Button.default(
                                                 Text("Oke"), action: {
                                                     drillTimer.setDrillState(newDrillState: .notStarted)
-                                                    presentationMode.wrappedValue.dismiss()
+                                                    //presentationMode.wrappedValue.dismiss()
+                                                    self.isReturn = true
                                                 }
                                             )
                             )
@@ -45,12 +47,16 @@ struct TimerView: View {
                                            primaryButton: .cancel(Text("Tidak")),
                                            secondaryButton: .destructive(Text("Ya")) {
                                                drillTimer.setDrillState(newDrillState: .notStarted)
-                                               presentationMode.wrappedValue.dismiss()
+                                               //presentationMode.wrappedValue.dismiss()
+                                               self.isReturn = true
                                            }
                                        )
                             }
                    }
                }
+           }
+           .fullScreenCover(isPresented: $isReturn){
+               ChooseShotView()
            }
            .onAppear(){
                drillTimer.progressCounter = 1
