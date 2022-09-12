@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct TutorialView: View {
+    
     @StateObject private var viewModel: TutorialViewModel = TutorialViewModel()
+    
+    @Environment(\.colorScheme) private var colorScheme: ColorScheme
+    
     var body: some View {
         VStack {
             TabView {
@@ -19,7 +23,7 @@ struct TutorialView: View {
             .tabViewStyle(.page)
             .indexViewStyle(.page(backgroundDisplayMode: .always))
         }.padding(.top)
-        .navigationTitle("Tutorial").navigationBarTitleDisplayMode(.inline)
+            .navigationTitle("Tutorial").navigationBarTitleDisplayMode(.inline).background(ThemeColor(self.colorScheme).primaryBackgroundColor)
     }
 }
 
