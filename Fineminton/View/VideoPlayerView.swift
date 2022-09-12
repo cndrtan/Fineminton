@@ -40,7 +40,7 @@ struct VideoPlayerView: View {
                     Text(self.data.description)
                         .font(.system(size: 15)).multilineTextAlignment(.leading)
                     Spacer()
-                }.padding([.leading, .bottom, .trailing], 4)
+                }.padding(4)
                 if self.data.showActionButton {
                     Button(action: {
                         isDrilling.toggle()
