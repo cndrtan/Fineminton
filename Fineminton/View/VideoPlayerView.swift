@@ -42,6 +42,7 @@ struct VideoPlayerView: View {
                     Spacer()
                 }.padding(4)
                 if self.data.showActionButton {
+                    Spacer()
                     Button(action: {
                         isDrilling.toggle()
                     }) {
@@ -61,6 +62,7 @@ struct VideoPlayerView: View {
                         TimerView()
                             .environmentObject(TimerViewModel())
                     }
+                    Spacer()
                 }
             }
         }
