@@ -21,7 +21,7 @@ struct VideoPlayerView: View {
         GeometryReader { geometry in
             VStack {
                 HStack() {
-                    Text(self.data.titleWithSequence(stepsCount: self.stepsCount))
+                    Text(self.data.titleWithSequence(stepsCount: self.stepsCount)).font(.system(size: 16)).fontWeight(.semibold)
                     Spacer()
                 }
                 if self.data.mediaType == "video" {
@@ -32,10 +32,15 @@ struct VideoPlayerView: View {
                     Image(self.data.mediaSource).resizable().frame( height: (geometry.size.height * 0.65)).cornerRadius(10).aspectRatio(contentMode: .fit).scaledToFit()
                 }
                 HStack() {
-                    Text(self.data.description)
+                    Text(self.data.firstLineDescription).font(.system(size: 15)).fontWeight(.semibold)
                         .multilineTextAlignment(.leading)
                     Spacer()
                 }.padding(4)
+                HStack() {
+                    Text(self.data.description)
+                        .font(.system(size: 15)).multilineTextAlignment(.leading)
+                    Spacer()
+                }.padding([.leading, .bottom, .trailing], 4)
                 if self.data.showActionButton {
                     Button(action: {
                         isDrilling.toggle()
