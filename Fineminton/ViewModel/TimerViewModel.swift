@@ -120,6 +120,7 @@ class TimerViewModel: ObservableObject{
                 self.remainedTime -= 1
             }
             else{
+                AudioServicesPlaySystemSound(1005)
                 setDrillState(newDrillState: .drilling)
                 self.drillSet += 1
             }
