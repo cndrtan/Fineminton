@@ -39,7 +39,7 @@ struct ShotView: View {
                 self.title.titleName = "Drop Shot"
             } label: {
                 Image("watch-6").resizable().frame(height: 60).padding(.top, 5)
-                Text("Drop").padding(.bottom, 10)
+                Text("Drop Shot").padding(.bottom, 10)
             }.sheet(isPresented: $isUnavailable) {
                 UnavailableView()
             }
