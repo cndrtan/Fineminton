@@ -26,7 +26,7 @@ class TimerViewModel: ObservableObject{
     @Published var progressCounter: Double = 0.0
     @Published var remainedTime = 3.0
     
-    @Published var ringColor: Color = blueRing ?? .blue
+    @Published var ringColor: Color = greenRing ?? .green
     
     @Published var showEndAlert: Bool = false
     
@@ -75,7 +75,7 @@ class TimerViewModel: ObservableObject{
         case .readying:
             remainedTime = Double(readyDuration)
             timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-            ringColor = blueRing ?? .blue
+            ringColor = greenRing ?? .green
         }
     }
     
@@ -120,6 +120,7 @@ class TimerViewModel: ObservableObject{
                 self.remainedTime -= 1
             }
             else{
+                AudioServicesPlaySystemSound(1005)
                 setDrillState(newDrillState: .drilling)
                 self.drillSet += 1
             }
