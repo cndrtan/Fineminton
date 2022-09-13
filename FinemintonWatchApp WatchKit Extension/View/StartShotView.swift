@@ -46,7 +46,6 @@ struct StartShotView: View {
                             }else{
                                 count -= 1
                             }
-                            WKInterfaceDevice.current().play(.start)
                         })
                     
                     ProgressBarView(progress: self.$progressValue, color: $practiceColor).padding().padding(.top, 5)
@@ -67,7 +66,8 @@ struct StartShotView: View {
                             self.presentationMode.wrappedValue.dismiss()
                         } label: {
                             Text("End")
-                        }.background(Color("orangeColor")).cornerRadius(30)
+                        }.buttonStyle(.plain).frame(width: 172, height: 44)
+                        .background(Color("orangeColor")).cornerRadius(30)
                     }.tag(1)
                     
                     //start practicing and rest countdown timer
@@ -99,6 +99,10 @@ struct StartShotView: View {
                                     if timeRemaining >= 1 {
                                         self.progressValue -= 1/60
                                     }else{
+                                        if timeRemaining == 0{
+                                            WKInterfaceDevice.current().play(.retry)
+                                        }
+                                        
                                         self.progressValue = 1.0
                                         timeRemaining = 30
                                         
@@ -119,12 +123,18 @@ struct StartShotView: View {
                                     if timeRemaining >= 1 {
                                         self.progressValue -= 1/30
                                     }else{
+                                        if timeRemaining == 0{
+                                            WKInterfaceDevice.current().play(.retry)
+                                        }
+                                        
                                         self.progressValue = 1.0
                                         timeRemaining = 60
                                         practiceSet += 1
                                         
                                         //haptic success
-                                        WKInterfaceDevice.current().play(.success)
+                                        if (practiceSet == 5 && timeRemaining == 0){
+                                            WKInterfaceDevice.current().play(.success)
+                                        }
                                         
                                         isPractice.toggle()
                                         
