@@ -38,7 +38,7 @@ struct ChooseShotView: View {
                         }
                         else{
                             Button{
-                                showAlert(title: "Oops maaf", message: "Latihan ini belum tersedia")
+                                showAlert(title: String(localized: "Oops maaf"), message: String(localized: "Latihan ini belum tersedia"))
                             }label: {
                                 ShotItemView(shot: shot)
                             }

@@ -39,10 +39,15 @@ struct ShotDescriptionView: View {
                         Spacer()
                     }
                     
-                    Text("Latihan ini meliputi 20 kali perulangan pukulan sebanyak 5 set. Anda akan diberikan waktu 1 menit pada setiap set untuk melakukan 20 kali pukulan clear.")
-                        .font(.system(size: 13))
-                        .fontWeight(.regular)
-                        .foregroundColor(.white)
+                    
+                    
+                    HStack{
+                        Text("Latihan ini meliputi 20 kali perulangan pukulan sebanyak 5 set. Anda akan diberikan waktu 1 menit pada setiap set untuk melakukan 20 kali pukulan clear.")
+                            .font(.system(size: 13))
+                            .fontWeight(.regular)
+                            .foregroundColor(.white)
+                        Spacer()
+                    }
                     
                     HStack{
                         Text("Pada setiap set, anda akan diberikan waktu istirahat sebanyak 30 detik.")
