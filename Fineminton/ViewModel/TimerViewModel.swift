@@ -33,13 +33,13 @@ class TimerViewModel: ObservableObject{
     var title: String{
         switch drillState{
         case .notStarted:
-            return "Sesi Latihan"
+            return String(localized: "Sesi Latihan")
         case .drilling:
-            return "Sesi Latihan"
+            return String(localized: "Sesi Latihan")
         case .resting:
-            return "Sesi Istirahat"
+            return String(localized: "Sesi Istirahat")
         case .readying:
-            return "Sesi Mulai"
+            return String(localized: "Sesi Mulai")
         }
     }
     

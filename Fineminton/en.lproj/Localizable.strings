@@ -108,3 +108,12 @@
 
 /* No comment provided by engineer. */
 " dari " = " out of ";
+
+/* No comment provided by engineer. */
+"Sesi Latihan" = "Drill Session";
+
+/* No comment provided by engineer. */
+"Sesi Istirahat" = "Rest Session";
+
+/* No comment provided by engineer. */
+"Sesi Mulai" = "Start Session";
