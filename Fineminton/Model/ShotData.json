@@ -3,7 +3,7 @@
         "id": 1,
         "shotName": "Clear/Lob",
         "shotImage": "Clear_Lob",
-        "shotSummary": "Pukulan jauh",
+        "shotSummary": "Pukulan jauh ke area belakang lawan",
         "shotDescription": "Jenis pukulan yang paling direkomendasikan untuk mengambil waktu dengan tujuan menengahkan lapangan adalah pukulan clear yang mendalam. Ketika anda bingung, pukulan clear bisa menjadi hal pertama yang anda lakukan. Pukulan clear yang digunakan untuk bertahan dapat disamakan dengan pukulan lob pada tenis.",
         "isOpen": true
     },
@@ -11,7 +11,7 @@
         "id": 2,
         "shotName": "Smash",
         "shotImage": "Smash",
-        "shotSummary": "pukulan keras ke daerah lawan",
+        "shotSummary": "Pukulan menukik keras ke daerah lawan",
         "shotDescription": "Jenis pukulan yang paling direkomendasikan untuk mengambil waktu dengan tujuan menengahkan lapangan adalah pukulan clear yang mendalam. Ketika anda bingung, pukulan clear bisa menjadi hal pertama yang anda lakukan. Pukulan clear yang digunakan untuk bertahan dapat disamakan dengan pukulan lob pada tenis.",
         "isOpen": false
     },
@@ -19,7 +19,7 @@
         "id": 3,
         "shotName": "Drop Shot",
         "shotImage": "Dropshot",
-        "shotSummary": "pukulan rendah di atas net",
+        "shotSummary": "Pukulan yang jatuh di dekat net lawan",
         "shotDescription": "Jenis pukulan yang paling direkomendasikan untuk mengambil waktu dengan tujuan menengahkan lapangan adalah pukulan clear yang mendalam. Ketika anda bingung, pukulan clear bisa menjadi hal pertama yang anda lakukan. Pukulan clear yang digunakan untuk bertahan dapat disamakan dengan pukulan lob pada tenis.",
         "isOpen": false
     },
@@ -27,7 +27,7 @@
         "id": 4,
         "shotName": "Drive Shot",
         "shotImage": "Drive",
-        "shotSummary": "pukulan ke daerah lawan",
+        "shotSummary": "Pukulan cepat dan mendatar ke area lawan",
         "shotDescription": "Jenis pukulan yang paling direkomendasikan untuk mengambil waktu dengan tujuan menengahkan lapangan adalah pukulan clear yang mendalam.Ketika anda bingung, pukulan clear bisa menjadi hal pertama yang anda lakukan. Pukulan clear yang digunakan untuk bertahan dapat disamakan dengan pukulan lob pada tenis.",
         "isOpen": false
     }
