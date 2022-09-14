@@ -12,6 +12,7 @@ public class ThemeColor {
     
     private var currentColorScheme: ColorScheme
     private var _buttonColor: Color = Color.blue
+    private var _primaryBackgroundColor: Color = Color.white
     
     public init(_ currentColorScheme: ColorScheme) {
         self.currentColorScheme = currentColorScheme
@@ -64,6 +65,18 @@ public class ThemeColor {
                 self._buttonColor = Color.blue
             }
             return self._buttonColor
+        }
+    }
+    
+    public var primaryBackgroundColor: Color {
+        get {
+            if(self.currentColorScheme == ColorScheme.dark) {
+                self._primaryBackgroundColor = Color(red: 0.11, green: 0.11, blue: 0.118);
+            }
+            else {
+                self._primaryBackgroundColor = Color.white
+            }
+            return self._primaryBackgroundColor
         }
     }
 }
