@@ -46,6 +46,7 @@ struct StartShotView: View {
                             }else{
                                 count -= 1
                             }
+                            WKInterfaceDevice.current().play(.start)
                         })
                     
                     ProgressBarView(progress: self.$progressValue, color: $practiceColor).padding().padding(.top, 5)
