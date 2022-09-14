@@ -20,7 +20,7 @@ public struct TutorialStep: Identifiable {
     public func titleWithSequence(stepsCount: Int) -> String {
         let total = stepsCount //allSteps.count
         let totalStr = String(total)
-        let titleOutOf = self.title + " dari " + totalStr + ":"
+        let titleOutOf = self.title + String(localized: " dari ") + totalStr + ":"
         return titleOutOf
     }
 }
