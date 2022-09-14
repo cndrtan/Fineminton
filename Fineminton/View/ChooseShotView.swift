@@ -49,7 +49,7 @@ struct ChooseShotView: View {
                     }
                 }
                 }
-                .navigationBarTitle("Practice Shot", displayMode: .large)
+                .navigationBarTitle(String(localized: "Latih Pukulan"), displayMode: .large)
             }
             .navigationViewStyle(.stack)
         }.accentColor(orangeButton)
