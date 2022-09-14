@@ -54,7 +54,7 @@ struct ShotView: View {
                 UnavailableView()
             }
         }.navigationBarTitleDisplayMode(.inline)
-            .navigationTitle(Text("Choose Shot"))
+            .navigationTitle(Text("Practice Shot"))
     }
 }
 
