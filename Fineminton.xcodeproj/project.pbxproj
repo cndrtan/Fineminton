@@ -100,6 +100,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2B3DB82028D2E33B00E2BFF2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2B470F9428BE09EA00A5A661 /* StartShotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartShotView.swift; sourceTree = "<group>"; };
 		2B470F9628BE1FA200A5A661 /* EndShotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndShotView.swift; sourceTree = "<group>"; };
 		2B470F9928BF453300A5A661 /* TitleSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSettings.swift; sourceTree = "<group>"; };
@@ -541,6 +542,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				2BAC5E3228D1E1D600A66594 /* id */,
+				2B3DB82028D2E33B00E2BFF2 /* en */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
